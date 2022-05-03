@@ -1,12 +1,14 @@
 body {
-    font-family: cursive,Arial, Helvetica, sans-serif;
+    font-family: system-ul, Arial, Helvetica, sans-serif;
     color: white;
     box-sizing: border-box;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(0, 41, 41);
+    justify-content: center;
+    background-color: rgb(0 126 126);
+   
 }
 
 /* =====================
@@ -36,6 +38,7 @@ body {
     background-color: white;
     padding-left: 13px;
     padding-right: 20px;
+    
 }
 
 #pesquisa input{
@@ -51,6 +54,12 @@ body {
     outline: 0;
 }
 
+#pesquisa:hover {
+    box-shadow: 1px 1px 8px 0px #000000;
+}
+
+
+
 #pesquisa button {
     background-color: white;
     border: none;
@@ -65,7 +74,7 @@ body {
 }
 
 .lupa{
-    width: 22px ;
+    width: 14px;
 }
 
 /* =============================================================
@@ -78,8 +87,23 @@ body {
 }
 
 /* =====================
-        iframe
+        noticias
 ===================== */
+
+#noticias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#noticias section {
+    margin-right: 15px;
+    border-radius: 38px;
+}
+
+#noticias :nth-child(3){     /* mudar de acordo com ultimo item das noticias */
+    margin-right: 0;
+}
 
 .iframe {
     width: 100%;
@@ -87,6 +111,50 @@ body {
     border: none;
 }
 
+#iframe-square {
+    width: 400px; 
+    height: 400px;
+    border-radius: 38px;
+    border: none;
+
+}
+
+
+#hover-news {
+    opacity: 0;
+    width: 400px; 
+    height: 400px; 
+    margin-top: -405px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    border-radius: 38px;
+}
+
+#div-news {
+    background-color: rgb(38, 45, 66);
+    opacity: 0.5;
+    width: 400px; height: 400px;
+    position: absolute;
+    margin-bottom: 0px;
+    border-radius: 38px;
+}
+
+
+#hover-news h1{
+    position: absolute;
+    font-size: 50px;
+}
+
+#hover-news:hover {
+    opacity: 1;
+    color: white;
+    box-shadow: 1px 1px 8px 0px #000000;
+    
+}
+
 /* =============================================================
-        Folders and links
+        loks
 ============================================================== */
+

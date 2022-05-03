@@ -7,6 +7,7 @@
     
     <title>Smart Room</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="head">
@@ -16,7 +17,7 @@
 
     <form id="pesquisa" method="get" action="https://www.google.com/search" target="_blank" >
         <button type="submit"> <img src="./img/lupa.PNG" class="lupa"></button>
-        <input type="text" class="tftextinput" name="q" id="google-search" ><br><br>
+        <input type="text" class="tftextinput" name="q" id="google-search" placeholder="Search"><br><br>
         <!-- <input type="submit" value="" class="tfbutton" src="/img/lupa.PNG">  -->
     </form>
 
@@ -37,6 +38,45 @@
         <p>Folders and links</p>
     </div>
 
-    <iframe src="https://www.cnnbrasil.com.br/" class="iframe"></iframe>
+                                         <!--========= noticias ========= -->
+    <div id="noticias"> 
+        <section id="noticias1">
+            <iframe src="https://www.tecmundo.com.br/" class="invisivel" id="iframe-square"  > Technologia </iframe>
+            
+            <div id="hover-news" class="invisivel" onclick="noticias()">
+                <div id="div-news"></div>
+                
+                <h1 >Tecnologia</h1>
+            </div>
+        </section>
+
+        <section id="noticias2">
+            <iframe src="https://www.cnnbrasil.com.br/" class="invisivel" id="iframe-square"  > Technologia </iframe>
+            
+            <div id="hover-news" class="invisivel" onclick="noticias2()">
+                <div id="div-news"></div>
+                
+                <h1 >Diversos</h1>
+            </div>
+        </section>
+        
+        <section id="noticias3">
+            <iframe src="https://www.infomoney.com.br/" class="invisivel" id="iframe-square"  > Technologia </iframe>
+            
+            <div id="hover-news" class="invisivel" onclick="noticias3()">
+                <div id="div-news"></div>
+                
+                <h1 >Finanças</h1>
+            </div>
+        </section>
+    </div>
+        
+   <!-- <button onclick="noticias()" class="invisivel">
+       News
+   </button> -->
+
+   
+
+   <script src="./script.js"></script>
 </body>
 </html>

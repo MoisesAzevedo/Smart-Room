@@ -1,0 +1,7 @@
+.invisivel{
+    display: none;
+}
+
+.hover-news:hover {
+    display:none
+}
