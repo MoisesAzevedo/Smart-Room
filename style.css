@@ -8,9 +8,9 @@ body {
     align-items: center;
     justify-content: center;
     /* background-color: rgb(0 126 126); */
-    background-image: url(/img/impression-sunrise.jpg);
-    background-repeat:repeat-x;
-    background-size: contain;
+    background-image: url(./img/vau2.jpg);
+    background-repeat:round;
+    background-size: cover;
    
 }
 
@@ -103,6 +103,12 @@ body {
     margin-right: 5px;
 }
 
+#noticias img  {
+    width: 260px; 
+    height: 260px;
+    opacity: 0.8;
+}
+
 #noticias :nth-child(3){     /* mudar de acordo com ultimo item das noticias */
     margin-right: 0;
     border-top-left-radius: 0;
@@ -110,32 +116,36 @@ body {
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
 }
-#noticias :nth-child(3) iframe{     /* mudar de acordo com ultimo item das noticias */
+#noticias :nth-child(3) img{     /* mudar de acordo com ultimo item das noticias */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
+   
 }
 #noticias :nth-child(3) div{     /* mudar de acordo com ultimo item das noticias */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 34px;
     border-bottom-right-radius: 34px;
+    
 }
 
-#noticias1{     /* mudar de acordo com ultimo item das noticias */
+#noticias1{     
     border-top-left-radius: 34px;
     border-bottom-left-radius: 34px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-#noticias1 iframe{     /* mudar de acordo com ultimo item das noticias */
+#noticias1 img{     
     border-top-left-radius: 34px;
     border-bottom-left-radius: 34px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border: none;
+    opacity: 0.7;
 }
-#noticias1 div{     /* mudar de acordo com ultimo item das noticias */
+#noticias1 div{     
     border-top-left-radius: 34px;
     border-bottom-left-radius: 34px;
     border-top-right-radius: 0;
@@ -161,20 +171,11 @@ body {
     border: none;
 }
 
-#iframe-square {
-    width: 400px; 
-    height: 400px;
-    border: none;
-    opacity: 0.7;
-    
-}
-
-
 #hover-news {
     opacity: 0;
-    width: 400px; 
-    height: 400px; 
-    margin-top: -405px;
+    width: 260px; 
+    height: 260px; 
+    margin-top: -264px;
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -186,8 +187,8 @@ body {
 #div-news {
     background-color: rgb(38, 45, 66);
     opacity: 0.5;
-    width: 400px; 
-    height: 400px;
+    width: 260px; 
+    height: 260px;
     position: absolute;
     margin-bottom: 0px;
     
