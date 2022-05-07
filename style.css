@@ -14,6 +14,80 @@ body {
    
 }
 
+a {
+    text-decoration: none;
+}
+
+
+/* =====================
+        Menus
+===================== */
+
+.menu-fundo{      /* botão apps */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+}
+
+.img-menu { 
+    width: 27px;
+}
+
+.menu-fundo:hover{
+    background-color: grey;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.menu{            /* div apps */
+    width: 340px;
+    height: 350px;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 1px 1px 8px 0px #000000;
+    right: 20px;
+    top: 65px;
+}
+
+.icones{
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: relative;
+    padding: 5px;
+}
+
+.icones p{
+    color: black;
+    margin: 0;
+    margin-top: 6px;
+   
+}
+
+.icones-fundo {
+    height: 86px;
+    width: 90px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.icones-fundo:hover {
+    background-color: rgb(0, 153, 153);
+    opacity: 0.4 ;
+    
+}
 /* =====================
         Head
 ===================== */
