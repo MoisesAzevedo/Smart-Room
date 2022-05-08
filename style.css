@@ -6,12 +6,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     /* background-color: rgb(0 126 126); */
-    background-image: url(./img/vau2.jpg);
     background-repeat:round;
-    background-size: cover;
-   
+    background-size: cover; 
+}
+
+.background-img{
+    position: fixed;
+    margin-top: 0;
+    z-index: -1;
+    width: 100%;
+    /* margin-top: 0; */
+    height: 984px;
 }
 
 a {
