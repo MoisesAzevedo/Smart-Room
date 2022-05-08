@@ -238,6 +238,7 @@ a {
     border: none;
     color: white;
     margin-bottom: 0;
+    opacity: 0.8;
 }
 .botao2:hover{
     background-color: grey;
