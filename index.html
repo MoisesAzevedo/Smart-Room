@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Smart Room</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/news.css">
     
 </head>
 <body>
@@ -53,41 +53,82 @@
     <!-- ========================= Noticias ======================== -->
     <h1>Notíciário</h1>
     
-    <div id="noticias"> 
-        <section id="noticias1">
-            <img src="./img/noticias/tech.jpg"  >
-            
-            <div id="hover-news" class="invisivel" onclick="noticias()" >
-                <div id="div-news"></div>
+    <a href="#janela-noticia" id="ancora-noticias">
+        <div id="noticias"> 
+            <section id="noticias1">
+                <img src="./img/noticias/techmund.jpg"  >
                 
-                <h1 >Tecnologia</h1>
-            </div>
-        </section>
+                <div id="hover-news" onclick="noticias()" >
+                    <div id="div-news"></div>
+                    
+                    <h1 >Tecnologia</h1>
+                </div>
+            </section>
 
-        <section id="noticias2">
-            <img src="./img/noticias/cnn.jpg" >
-            
-            <div id="hover-news" class="invisivel" onclick="noticias2()">
-                <div id="div-news"></div>
+            <section id="noticias2">
+                <img src="./img/noticias/cnnBrasil.jpg" >
                 
-                <h1 >Diversas</h1>
-            </div>
-        </section>
-        
-        <section id="noticias3">
-            <img src="./img/noticias/infomoney.jpg" >
+                <div id="hover-news" onclick="noticias2()">
+                    <div id="div-news"></div>
+                    
+                    <h1 >Diversas</h1>
+                </div>
+            </section>
             
-            <div id="hover-news" class="invisivel" onclick="noticias3()">
-                <div id="div-news"></div>
+            <section id="noticias3">
+                <img src="./img/noticias/IM.png" >
                 
-                <h1 >Finanças</h1>
-            </div>
-        </section>
-    </div>
-        
-   <!-- <button onclick="noticias()" class="invisivel">
-       News
-   </button> -->
+                <div id="hover-news" onclick="noticias3()">
+                    <div id="div-news"></div>
+                    
+                    <h1 >Dinheiro</h1>
+                </div>
+            </section>
+        </div>
+    </a>
+    
+    <a href="#janela-noticia" id="ancora-noticias2">
+        <div id="noticias"> 
+            <section id="noticiasA">
+                <img src="./img/noticias/techradar.png"  >
+                
+                <div id="hover-news" onclick="noticiasA()" >
+                    <div id="div-news"></div>
+                    
+                    <h1 >Tech - exterior</h1>
+                </div>
+            </section>
+
+            <section id="noticiasB">
+                <img src="./img/noticias/bundle.jpg" >
+                
+                <div id="hover-news" onclick="noticiasB()">
+                    <div id="div-news"></div>
+                    
+                    <h1 >internacional</h1>
+                </div>
+            </section>
+            
+            <section id="noticiasC">
+                <img src="./img/noticias/sturtup.jpg" >
+                
+                <div id="hover-news" onclick="noticiasC()">
+                    <div id="div-news"></div>
+                    
+                    <h1 >SturtUp</h1>
+                </div>
+            </section>
+        </div>
+    </a>
+    
+    
+
+    <a href="#janela-noticia" id="ancora-principais">
+        <button onclick="principais_noticias()" id="button-principais">
+               <h1>Principais Noticias</h1>
+        </button>
+    </a>
+<!-- ======================================================================    -->
 
    
 

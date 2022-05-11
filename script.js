@@ -6,47 +6,127 @@
 /* ======================================
         Funções: iframes de noticias
 ====================================== */
-function noticias(){            
-    //remove o iframe
-    if (document.querySelector('.janela-noticia') != null) {
-        document.querySelector('.janela-noticia').remove();
+function noticias(){
+    //Remove o button Principais Noticias
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }            
+   
+    //remove o iframe (se tiver algum ifreme ja aberto)
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
     } 
-
-        //imprime o iframe 
-        document.querySelector('body').innerHTML += ` 
-            <div style="width: 100%" class="janela-noticia">
-                <button onclick="stopNews()"  class="botao2">Stop News</button> 
-                <iframe src="https://www.tecmundo.com.br/" class="iframe"></iframe> 
-            </div> `    
+   
+    //imprime o novo iframe 
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://www.tecmundo.com.br/" class="iframe"></iframe> 
+        </div> `    
 }
 
 function noticias2(){
-    if (document.querySelector('.janela-noticia') != null) {
-        document.querySelector('.janela-noticia').remove();
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }
+
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
     }
 
     document.querySelector('body').innerHTML += ` 
-        <div style="width: 100%" class="janela-noticia">
-            <button onclick="stopNews()" class="botao2">Stop News</button> 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()" class="botao2">Encerrar Noticias</button> 
             <iframe src="https://www.cnnbrasil.com.br/" class="iframe"></iframe> 
         </div> `
 }
 
 function noticias3(){
-    if (document.querySelector('.janela-noticia') != null) {
-        document.querySelector('.janela-noticia').remove();
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }
+
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
     }
 
     document.querySelector('body').innerHTML += ` 
-        <div style="width: 100%" class="janela-noticia">
-            <button onclick="stopNews()"  class="botao2">Stop News</button> 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
             <iframe src="https://www.infomoney.com.br/" class="iframe"></iframe> 
         </div> `
 }
 
-//função do botão Stop News 
-function stopNews(){  
-    document.querySelector('.janela-noticia').remove();
+function noticiasA(){
+    //Remove o button Principais Noticias
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }            
+   
+    //remove o iframe (se tiver algum ifreme ja aberto)
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
+    } 
+   
+    //imprime o novo iframe 
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://www.techradar.com/" class="iframe"></iframe> 
+        </div> `    
+}
+
+function noticiasB(){
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }
+
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
+    }
+
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()" class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://www.bundle.app/en/breakingNews" class="iframe"></iframe> 
+        </div> `
+}
+
+function noticiasC(){
+    if (document.getElementById('button-principais') != null){
+        document.querySelector('#button-principais').remove();
+    }
+
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
+    }
+
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://startups.com.br/noticias/" class="iframe"></iframe> 
+        </div> `
+}
+
+/* ======================= Principais noticias (bing) ============ */
+function principais_noticias(){
+    document.querySelector('#button-principais').remove();
+    
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://www.bing.com/news/search?q=Brasil&nvaug=%5bNewsVertical+Category%3d%22rt_Brazil%22%5d&FORM=NSBABR" class="iframe"></iframe> 
+        </div> `
+}
+
+//============= função do botão Encerrar Noticias =========== 
+function encerrarNews(){  
+    document.querySelector('#janela-noticia').remove();
+    
+    document.getElementById('ancora-principais').innerHTML += 
+        ` <button onclick="principais_noticias()" id="button-principais">
+             <h1> Principais Noticias </h1>
+          </button> `
 }
 
 /* ======================================
