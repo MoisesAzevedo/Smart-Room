@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)file:///C:/Users/taian/zeu/Curso%20em%20video%20JS/Aula%207%20-%20Guardando%20valores%20na%20variavel/novaCERTINHA.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo ok dessa vez</title>
+</head>
+<body>
+
+    <div class="frase-div">
+        
+    <h1 id="frase-id">null</h1></div>
+
+    <button id="alterar-button" onclick="alterar()">Alterar frase</button>
+
+   
+    <!-- ===================SCRIPT========================= -->
+    <script>
+
+        var frase = localStorage.getItem('frase')
+        frase = JSON.parse(frase)
+
+        function alterar(){
+            var frase = window.prompt('Olá, por favor insira uma frase')
+
+            localStorage.setItem('frase', JSON.stringify(frase))
+            frase = localStorage.getItem('frase')
+            frase = JSON.parse(frase)
+
+            document.getElementById('frase-id').remove()
+            document.querySelector('.frase-div').innerHTML += `<h1 id="frase-id">${frase}</h1>`
+
+            console.log(frase)
+            
+        } 
+
+        if (frase != null){
+           /*  localStorage.setItem('frase', JSON.stringify(frase)) */
+            frase = localStorage.getItem('frase')
+            frase = JSON.parse(frase)
+
+            document.getElementById('frase-id').remove()
+            document.querySelector('.frase-div').innerHTML += `<h1 id="frase-id">${frase}</h1>`
+        }
+
+    </script>
+
+
+    <!-- ===================SCRIPT========================= -->
+    
+
+</body></html>

@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    background-color:#363636;;
+}
+
 /* =====================
         Menus
 ===================== */
@@ -159,6 +163,20 @@ a {
     margin-top: 0;
     font-size: 25px;
 }
+
+.head h1:hover{
+    color: rgb(195, 255, 255);
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#menu-edit-frase-fundo {
+    
+}
+
+/* ================================================================
+        PESQUISA
+================================================================ */
 
 #pesquisa {
     width: 544px;

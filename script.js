@@ -8,9 +8,7 @@
 ====================================== */
 function noticias(){
     //Remove o button Principais Noticias
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }            
+              
    
     //remove o iframe (se tiver algum ifreme ja aberto)
     if (document.querySelector('#janela-noticia') != null) {
@@ -26,9 +24,7 @@ function noticias(){
 }
 
 function noticias2(){
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }
+   
 
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
@@ -42,9 +38,7 @@ function noticias2(){
 }
 
 function noticias3(){
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }
+    
 
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
@@ -59,9 +53,7 @@ function noticias3(){
 
 function noticiasA(){
     //Remove o button Principais Noticias
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }            
+               
    
     //remove o iframe (se tiver algum ifreme ja aberto)
     if (document.querySelector('#janela-noticia') != null) {
@@ -77,9 +69,7 @@ function noticiasA(){
 }
 
 function noticiasB(){
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }
+    
 
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
@@ -93,10 +83,7 @@ function noticiasB(){
 }
 
 function noticiasC(){
-    if (document.getElementById('button-principais') != null){
-        document.querySelector('#button-principais').remove();
-    }
-
+    
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
     }
@@ -108,9 +95,12 @@ function noticiasC(){
         </div> `
 }
 
-/* ======================= Principais noticias (bing) ============ */
+/* ======================= Principais noticias (bing) / Link do usuário ============ */
+
 function principais_noticias(){
-    document.querySelector('#button-principais').remove();
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
+    }
     
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
@@ -118,15 +108,22 @@ function principais_noticias(){
             <iframe src="https://www.bing.com/news/search?q=Brasil&nvaug=%5bNewsVertical+Category%3d%22rt_Brazil%22%5d&FORM=NSBABR" class="iframe"></iframe> 
         </div> `
 }
+/* -----------------------Botão User--------------------- */
+function principais_noticias2(){
+    if (document.querySelector('#janela-noticia') != null) {
+        document.querySelector('#janela-noticia').remove();
+    }
+    
+    document.querySelector('body').innerHTML += ` 
+        <div style="width: 100%" id="janela-noticia">
+            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            <iframe src="https://www.suno.com.br/artigos/" class="iframe"></iframe> 
+        </div> `
+}
 
 //============= função do botão Encerrar Noticias =========== 
 function encerrarNews(){  
     document.querySelector('#janela-noticia').remove();
-    
-    document.getElementById('ancora-principais').innerHTML += 
-        ` <button onclick="principais_noticias()" id="button-principais">
-             <h1> Principais Noticias </h1>
-          </button> `
 }
 
 /* ======================================

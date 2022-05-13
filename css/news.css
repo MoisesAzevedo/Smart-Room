@@ -1,6 +1,14 @@
 /* =====================
         noticias
 ===================== */
+.div-noticias{
+    width: 799px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 265px;
+    margin-bottom: 5px;
+}
 
 #ancora-noticias{
     height: 130px;
@@ -70,7 +78,7 @@
 
 #ancora-noticias2{
     height: 130px;
-    margin-bottom: 68px;
+    margin-bottom: 5px;
 }
 
 #noticiasA{     
@@ -153,29 +161,68 @@
 }
 
 /* =========== Priincipais noticias ========= */
-#ancora-principais{
-    width: 100%;
+.ancora-principais {
+    display: flex;
+    width: 733px;
+    height: 60px; 
+}
+
+.div-principais{
+    display: flex;
+    width: 733px;
     height: 60px; 
     bottom: 0;
     padding: 0;
-    margin-bottom: 0;
+    opacity: 0;
+    margin-bottom: 68px;
 }
 
+.div-principais:hover{
+    opacity: 1;
+}
+
+.div-noticias:hover + .div-principais {
+    opacity: 1;
+}
+
+
 #button-principais{
-    width: 100%;
+    width: 365.5px;
     height: 60px;
     background: #363636;
-    border: none;
     color: white;
+    border: none;
     margin-bottom: 0;
     opacity: 0.7;
     bottom: 0;
-    margin-bottom: 0;
-      
+    border-bottom-left-radius: 34px;
+    margin-bottom: 0;    
 }
 
 #button-principais:hover{
-    background-color: grey;
+    opacity: 1;
     cursor: pointer;
+    box-shadow: 1px 1px 8px 0px #000000;
+
 }
+
+#button-principais-user{
+    width: 365.5px;
+    height: 60px;
+    background: #363636;
+    color: white;
+    border: none;
+    margin-bottom: 0;
+    opacity: 0.7;
+    bottom: 0;
+    border-bottom-right-radius: 34px;
+    margin-bottom: 0;    
+}
+
+#button-principais-user:hover{
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px 0px #000000;
+}
+
 /* ========================================== */

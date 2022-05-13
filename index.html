@@ -20,31 +20,18 @@
     <div class="micro-fundo">
         <img src="./img/menu.png" class="img-menu" onclick="micro()">
     </div>
-    <!--====================== ========================== -->
+    <!--============================= Header ================================ -->
 
     <div class="head">
         <p>Welcome To Smart Room</p>
-        <h1>Dê mais um passo na direção certa!</h1>
+        <h1 id="h1-id" onclick="fraseEdit()">Dê mais um passo na direção certa!</h1>
     </div>
-    
+
     <form id="pesquisa" method="get" action="https://www.google.com/search" target="_blank" >
         <button type="submit"> <img src="./img/lupa.PNG" class="lupa"></button>
         <input type="text" class="tftextinput" name="q" id="google-search" placeholder="Search"><br><br>
         <!-- <input type="submit" value="" class="tfbutton" src="/img/lupa.PNG">  -->
     </form>
-
-    
-
-    <!-- <div>
-        <script async src="https://cse.google.com/cse.js?cx=d779e14d4e360f58c"></script>
-        <div class="gcse-search"></div>
-    </div> -->
-                                                                                                       <!-- API do google
-    <div>
-        <script async src="https://cse.google.com/cse.js?cx=d779e14d4e360f58c" target="_blank"></script>    
-        <div class="gcse-search"></div>
-    </div> -->
-
 
     <div class="links">
         <p>Folders and links</p>
@@ -52,86 +39,102 @@
 
     <!-- ========================= Noticias ======================== -->
     <h1>Notíciário</h1>
-    
-    <a href="#janela-noticia" id="ancora-noticias">
-        <div id="noticias"> 
-            <section id="noticias1">
-                <img src="./img/noticias/techmund.jpg"  >
-                
-                <div id="hover-news" onclick="noticias()" >
-                    <div id="div-news"></div>
-                    
-                    <h1 >Tecnologia</h1>
-                </div>
-            </section>
 
-            <section id="noticias2">
-                <img src="./img/noticias/cnnBrasil.jpg" >
-                
-                <div id="hover-news" onclick="noticias2()">
-                    <div id="div-news"></div>
+    <div class="div-noticias" > 
+        <a href="#janela-noticia" id="ancora-noticias">
+            <div id="noticias"> 
+                <section id="noticias1">
+                    <img src="./img/noticias/techmund.jpg"  >
                     
-                    <h1 >Diversas</h1>
-                </div>
-            </section>
+                    <div id="hover-news" onclick="noticias()" >
+                        <div id="div-news"></div>
+                        
+                        <h1 >Tecnologia</h1>
+                    </div>
+                </section>
+
+                <section id="noticias2">
+                    <img src="./img/noticias/cnnBrasil.jpg" >
+                    
+                    <div id="hover-news" onclick="noticias2()">
+                        <div id="div-news"></div>
+                        
+                        <h1 >Diversas</h1>
+                    </div>
+                </section>
+                
+                <section id="noticias3">
+                    <img src="./img/noticias/IM.png" >
+                    
+                    <div id="hover-news" onclick="noticias3()">
+                        <div id="div-news"></div>
+                        
+                        <h1 >Dinheiro</h1>
+                    </div>
+                </section>
+            </div>
+        </a>
+        
+        <a href="#janela-noticia" id="ancora-noticias2">
+            <div id="noticias"> 
+                <section id="noticiasA">
+                    <img src="./img/noticias/techradar.png"  >
+                    
+                    <div id="hover-news" onclick="noticiasA()" >
+                        <div id="div-news"></div>
+                        
+                        <h1 >Tech - exterior</h1>
+                    </div>
+                </section>
+
+                <section id="noticiasB">
+                    <img src="./img/noticias/bundle.jpg" >
+                    
+                    <div id="hover-news" onclick="noticiasB()">
+                        <div id="div-news"></div>
+                        
+                        <h1 >internacional</h1>
+                    </div>
+                </section>
+                
+                <section id="noticiasC">
+                    <img src="./img/noticias/sturtup.jpg" >
+                    
+                    <div id="hover-news" onclick="noticiasC()">
+                        <div id="div-news"></div>
+                        
+                        <h1 >SturtUp</h1>
+                    </div>
+                </section>
+            </div>
+        </a>
+    </div>
+
+    
+    <div class="div-principais">
+        <a href="#janela-noticia" class="ancora-principais" > 
+            <button onclick="principais_noticias()" id="button-principais" style="background-image: url(./img/noticias/mais\ noticias.jpg); background-size: cover;" >
+                <img src="" alt="">
+            </button>
             
-            <section id="noticias3">
-                <img src="./img/noticias/IM.png" >
-                
-                <div id="hover-news" onclick="noticias3()">
-                    <div id="div-news"></div>
-                    
-                    <h1 >Dinheiro</h1>
-                </div>
-            </section>
-        </div>
-    </a>
-    
-    <a href="#janela-noticia" id="ancora-noticias2">
-        <div id="noticias"> 
-            <section id="noticiasA">
-                <img src="./img/noticias/techradar.png"  >
-                
-                <div id="hover-news" onclick="noticiasA()" >
-                    <div id="div-news"></div>
-                    
-                    <h1 >Tech - exterior</h1>
-                </div>
-            </section>
+            <button onclick="principais_noticias2()" id="button-principais-user" style="background-image: url(./img/noticias/meu\ favorito.jpg); background-size: cover;">
+            </button>
+        </a>
+    </div>
 
-            <section id="noticiasB">
-                <img src="./img/noticias/bundle.jpg" >
-                
-                <div id="hover-news" onclick="noticiasB()">
-                    <div id="div-news"></div>
-                    
-                    <h1 >internacional</h1>
-                </div>
-            </section>
-            
-            <section id="noticiasC">
-                <img src="./img/noticias/sturtup.jpg" >
-                
-                <div id="hover-news" onclick="noticiasC()">
-                    <div id="div-news"></div>
-                    
-                    <h1 >SturtUp</h1>
-                </div>
-            </section>
-        </div>
-    </a>
     
+   
+   
+   
+
     
 
-    <a href="#janela-noticia" id="ancora-principais">
-        <button onclick="principais_noticias()" id="button-principais">
-               <h1>Principais Noticias</h1>
-        </button>
-    </a>
+   
 <!-- ======================================================================    -->
 
    
 
    <script src="./script.js"></script>
+   <script src="./js/frase.js"></script>
 </body>
 </html>
