@@ -62,7 +62,7 @@ function micro(){
     ]
     /* -------------------------------------------- */
     
-    /* -------------- Abre o menu com todas os apps ------ */
+     /* -------------- Abre o menu com todas os apps ------ */
     if (document.querySelector('.menuMicro') != null ){
         document.querySelector('.menuMicro').remove();
     } else {
@@ -95,3 +95,5 @@ function micro(){
     }
     /* ---------------------------------------------------- */
 }
+
+//Nova tentativa de commit

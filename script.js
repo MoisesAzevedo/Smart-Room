@@ -278,7 +278,7 @@ function google(){
         </form>
         
         `
-        //Imprime altomaticamente os apps do usuário
+         //Imprime altomaticamente os apps do usuário
         
         
             for (imprime2 in formsGoogle0) { 

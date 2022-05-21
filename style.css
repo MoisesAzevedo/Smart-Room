@@ -38,7 +38,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #9aa1aa;     /* Cor da barrinha do scrollbar*/  
+    background: #9aa1aa;       /* Cor da barrinha do scrollbar*/  
     border-radius: 35px;
 }
 

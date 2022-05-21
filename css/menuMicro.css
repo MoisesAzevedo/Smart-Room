@@ -42,7 +42,7 @@
 
    
 }
- #micro-in-scroll {      /*os apps estão numa div dentro do scroll */
+ #micro-in-scroll {        /*os apps estão numa div dentro do scroll */
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 14px;
