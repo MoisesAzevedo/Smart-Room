@@ -1,0 +1,76 @@
+
+
+/* ========== Microsoft ======  */
+.micro-fundo{      /* botão apps (grade bolinhas) */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+}
+.micro-fundo:hover{             
+    background-color: grey;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.menuMicro{            /* div apps (Js) */
+    width: 340px;
+    height: 411px;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0px;
+    box-shadow: 1px 1px 8px 0px #000000;
+    left: 20px;
+    top: 65px;
+}
+
+#micro-apps-scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 368px;
+    margin-top: 7px;
+    margin-right: 4px;
+
+   
+}
+ #micro-in-scroll {      /*os apps estão numa div dentro do scroll */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 14px;
+    margin-left: 9px;
+}
+
+#img-micro {
+    margin-right: 11px;
+}
+
+.menuMicro form{            /* form ao qual se encontra o botão mais da microsoft */
+    position: absolute;
+    margin-top: -7px;
+    z-index: 1;
+}
+
+.menuMicro form button{            /* botão mais da microsoft */
+    BORDER: none;
+    height: 44px;
+    width: 340px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.menuMicro form button:hover {
+    background-color: rgb(65, 83, 83);
+    cursor: pointer;
+}
