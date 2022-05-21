@@ -17,7 +17,8 @@ body {
     z-index: -1;
     width: 100%;
     /* margin-top: 0; */
-    height: 984px;
+    height: 790px;
+    background-size: inherit;
 }
 
 a {
@@ -345,9 +346,7 @@ div ::-webkit-scrollbar-thumb {
     margin-bottom: 200px;
 }
 
-/* =============================================================
-        loks
-============================================================== */
+
 
 
 

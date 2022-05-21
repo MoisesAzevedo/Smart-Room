@@ -9,19 +9,29 @@
     <link rel="stylesheet" href="./css/news.css">
     <link rel="stylesheet" href="./css/userAppsGoogle.css">
     <link rel="stylesheet" href="./css/menuMicro.css">
+    <link rel="stylesheet" href="./css/config.css">
     
 </head>
 <body>
-    <img src="./img/vau2.jpg" class="background-img">
+    <!-- <img src="./img/Background/Monet/3.jpg" class="background-img"> -->
+   
+    <div style="background-image: url(./img/Background/Monet/32.jpg);" class="background-img">
+    </div>
 
     <!--====================== menus de apps:========================== -->
     <div class="google-fundo">
         <img src="./img/menu.png" class="img-menu" onclick="google()">
     </div>
     
-    <div class="micro-fundo">
+  <div class="micro-fundo">          <!--   menuMicro.css e menuMicro.js -->
         <img src="./img/menu.png" class="img-menu" onclick="micro()">
     </div>
+
+    <!--====================== Configurações :========================== -->
+    <div class="config-fundo">         <!--  config.js -->
+        <img src="./img/engrenagem.png" onclick="config()">
+    </div>
+    
     <!--============================= Header ================================ -->
 
     <div class="head-frase">
@@ -125,11 +135,12 @@
         </a>
     </div>
 <!-- ======================================================================    -->
-   
 
    <script src="./script.js"></script>
    <script src="./js/frase.js"></script>
    <script src="./js/userAppsGoogle.js"></script>
    <script src="./js/menuMicro.js"></script>
+   <script src="./js/config.js"></script>
 </body>
 </html>
+
