@@ -34,10 +34,41 @@
     margin: auto;
     margin-top: 20px;
     width: 80%;
-    height: 80%;
+    height: 600px;
     border-radius: 10px;
     box-shadow: 1px 1px 8px 0px #222222c7;
     z-index: 100;
+}
+
+#configHead {
+    position: absolute;
+    display: flex;
+    background-color: var(--ButtonCor);
+    width: 100%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    color: white;
+}
+
+
+#configHead p {
+    margin-left: 10px;
+ }
+
+#configHead button {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    color: white;
+    border-top-right-radius: 9px;
+    border: none;
+    z-index: 10000;
+}
+
+#configHead button:hover {
+    cursor: pointer;
+    background-color: var(--buttonOff_cor);
 }
 
 .menuConfig h2:hover{
@@ -63,8 +94,11 @@
 /* ======= Conteudo ====  */
 #configConteudo {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 99.8%;
+    height: 549px;
+    margin-top: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* ========================================

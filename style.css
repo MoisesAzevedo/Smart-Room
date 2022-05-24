@@ -1,3 +1,15 @@
+/* ============================
+        Variáveis de cor 
+============================= */
+:root {
+    --textoCor: #161616; 
+    --ButtonCor: #363636;
+    --ButtonCor_hover: rgb(65, 83, 83);
+    --appHover: rgb(148 221 221);
+    --buttonOff_cor: rgb(170, 2, 2);
+
+}
+
 body {
     font-family: system-ul, Arial, Helvetica, sans-serif;
     color: white;
@@ -26,7 +38,7 @@ a {
 }
 
 button {
-    background-color:#363636;;
+    background-color: var(--ButtonCor);
 }
 
 /* ===================== ScrollBars ================ */

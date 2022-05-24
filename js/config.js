@@ -3,8 +3,15 @@ function config(){
         document.querySelector('.menuConfig').remove()
     } else {
         document.querySelector('body').innerHTML +=
-        `<div id="menu-edit-frase-fundo" onclick="menu_edit_off()" ></div> 
-         <div class="menuConfig">
+        `<div id="menu-edit-frase-fundo" onclick="menu_edit_off()" >
+        </div> 
+
+        <div class="menuConfig">
+            <div  id="configHead"> 
+                <p>Configurações</p>
+                <button onclick="configOff()">✖</button>
+            </div>
+
             <div id="configLista">
                 <p onclick="personalizar()">Personalização</p>       
                 <p onclick="siteFavorito()">Editar site favorito</p>       
@@ -12,7 +19,7 @@ function config(){
         
             <div id="configConteudo">
                 <div id="configInicio">
-                    <h1>Congurações</h1>
+                    <h1>Configurações</h1>
                     <p > Selecione uma configuração no canto esquerdo da janela </p>
                 </div>
             </div>
@@ -20,6 +27,14 @@ function config(){
     }
 }
 
+
+/* ==================================================
+             configOff 
+==================================================== */
+function configOff() {
+    document.querySelector('.menuConfig').remove()
+    document.querySelector('#menu-edit-frase-fundo').remove()
+}
 
 /* ==================================================
             Personalizar
@@ -107,6 +122,8 @@ function paisagens() {
         }
     }
 }
+
+
 /* ==================================================
             Site favorito
 ==================================================== */
