@@ -59,6 +59,8 @@ function menu_edit_off() {
         document.getElementById('menu-edit-frase').remove();
     } else if (document.getElementById('menu-edit-appGoogle') != null) {  //botão add apps do google
         userAppsGoogle_off() 
+    } else if (document.querySelector('.menuConfig') != null) {
+        document.querySelector('.menuConfig').remove()
     }
 }
 
