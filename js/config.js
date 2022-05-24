@@ -20,16 +20,10 @@ function config(){
     }
 }
 
-var monet = [
-    {
-        img: `  <div class="elemento" >
-                    <img src="./img/Background/Monet/1500 x788/11.jpg" onclick="fundo11()">
-                </div>`
-    }
-]
 
- console.log(monet)
-
+/* ==================================================
+            Personalizar
+==================================================== */
 function personalizar() {
     if (document.getElementById('personalizar') != null) {
         console.log("oi")
@@ -47,14 +41,30 @@ function personalizar() {
         <div id="personalizar">
             <h1>Alterar plano de fundo</h1>
 
-            <h2>Monet:</h2>
-            <div id="configScroll">
-                <div class="imagens">
+            <h2 onclick="monet()" >Monet:</h2>
+            <div id="monetDiv">
+            </div> 
 
-                </div>  
+            <h2 onclick="paisagens()" >Paisagens:</h2>
+            <div id="paisagensDiv">
             </div>
         </div>`;
+    }
+
+}
+/* ==================== Monet ========================= */
+function monet() {
+    if (document.getElementById('monetScroll') != null ){
+        document.getElementById('monetScroll').remove()
+    } else {
+        document.getElementById('monetDiv').innerHTML += 
+        `<div id="monetScroll"> 
+             <div id="imagensMonet">
+
+              </div> 
+        </div> `
         
+              
         var c =0
         
         for (;; ) {
@@ -63,15 +73,43 @@ function personalizar() {
             console.log(c);
             console.log('VAI');
             
-            document.querySelector('.imagens').innerHTML += 
+            document.querySelector('#imagensMonet').innerHTML += 
             `<div class="elemento" >
-                 <img src="./img/Background/Monet/1500 x788/${c}.jpg" onclick="fundo${c}()">
+                 <img src="./img/Background/Monet/1500 x788/${c}.jpg" onclick="monet${c}()">
             </div>`;
         }
     }
-
 }
 
+/* ==================== Paisagens ========================= */
+function paisagens() {
+    if (document.getElementById('paisagensScroll') != null ) {
+        document.getElementById('paisagensScroll').remove()
+    } else {
+        document.getElementById('paisagensDiv').innerHTML +=
+        `<div id="paisagensScroll">  
+            <div id="paisagensImagens">
+            
+            </div> 
+        </div>`
+
+        var i = 0 
+
+        for (;;) {
+            i++;
+
+            if (i > 20 ) break;
+
+            document.querySelector('#paisagensImagens').innerHTML += 
+            `<div id="paisagensElemento">
+                <img src="./img/Background/paisagens/${i}.jpg" onclick="paisagen${1}()" alt="">
+            </div>`
+        }
+    }
+}
+/* ==================================================
+            Site favorito
+==================================================== */
 function siteFavorito() {
     if (document.getElementById('emBreve') != null) {
         alert('Calma, já vai sair (kk)')

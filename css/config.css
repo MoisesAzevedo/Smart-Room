@@ -39,10 +39,12 @@
     box-shadow: 1px 1px 8px 0px #222222c7;
     z-index: 100;
 }
-    /* width: 1400px;
-    height: 650px;
-} */
 
+.menuConfig h2:hover{
+    cursor: pointer;
+    color: rgb(0, 107, 107);
+}
+   
 /* ======= Lista ====  */
 #configLista {
     border-right: solid 1px black;
@@ -65,14 +67,17 @@
     height: 100%;
 }
 
-/* ======= Plano de fundo ====  */
+/* ========================================
+       Personalizar
+========================================= */
 #personalizar {
     position: absolute;
     width: 99%;
     height: 100%;
 }
 
-#configScroll {
+/* ======= Monet ====  */
+#monetScroll {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
@@ -80,7 +85,7 @@
   
 }
 
-.imagens {
+#imagensMonet {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -103,6 +108,45 @@
 }
 
 .elemento img:hover {
+    height: 120px;
+    z-index: 10;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* ======= Paisagens ====  */
+
+#paisagensScroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 326px;;
+  
+}
+
+#paisagensImagens {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#paisagensElemento {
+    position: relative;
+    width: 203px;
+    height: 181px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paisagensElemento img {
+    height: 100px;
+    position: absolute;
+    transition: 1s;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px 0px #2222229c;
+}
+
+#paisagensElemento img:hover {
     height: 120px;
     z-index: 10;
     transition: 0.5s;
