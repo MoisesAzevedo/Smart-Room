@@ -4,7 +4,7 @@
 
 
 /* ======================================
-        Funções: iframes de noticias
+      🟡  Funções: iframes de noticias
 ====================================== */
 function noticias(){
     //Remove o button Principais Noticias
@@ -127,7 +127,7 @@ function encerrarNews(){
 }
 
 /* ======================================
-        Funções dos botões menu
+      🟡  Funções dos botões menu
 ====================================== */
 
 //Google:

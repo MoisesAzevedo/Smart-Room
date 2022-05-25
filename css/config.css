@@ -1,5 +1,5 @@
 /* =============================================================
-        Botão engrenagem
+        🟡Botão engrenagem
 ============================================================== */
 .config-fundo{      /* botão configurações */
     position: absolute;
@@ -24,7 +24,7 @@
 }
 
 /* =============================================================
-        menu
+       🟡 menu
 ============================================================== */
 .menuConfig {
     position: fixed;
@@ -99,10 +99,11 @@
     margin-top: 50px;
     overflow-y: scroll;
     overflow-x: hidden;
+    margin-right: 4px;
 }
 
 /* ========================================
-       Personalizar
+       🟡Personalizar
 ========================================= */
 #personalizar {
     position: absolute;
@@ -127,21 +128,23 @@
 .elemento {
     position: relative;
     width: 203px;
-    height: 181px;
+    height: 133px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.elemento img {
+.elemento-img {
     height: 100px;
+    width: 200px;
     position: absolute;
-    transition: 1s;
-    border-radius: 8px;
+    transition: 0.5s;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px 0px #2222229c;
+    background-size: cover;
 }
 
-.elemento img:hover {
+.elemento-img:hover {
     height: 120px;
     z-index: 10;
     transition: 0.5s;
@@ -166,25 +169,10 @@
 #paisagensElemento {
     position: relative;
     width: 203px;
-    height: 181px;
+    height: 133px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#paisagensElemento img {
-    height: 100px;
-    position: absolute;
-    transition: 1s;
-    border-radius: 8px;
-    box-shadow: 1px 1px 8px 0px #2222229c;
-}
-
-#paisagensElemento img:hover {
-    height: 120px;
-    z-index: 10;
-    transition: 0.5s;
-    cursor: pointer;
 }
 
 

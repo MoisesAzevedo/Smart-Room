@@ -3,7 +3,7 @@ function config(){
         document.querySelector('.menuConfig').remove()
     } else {
         document.querySelector('body').innerHTML +=
-        `<div id="menu-edit-frase-fundo" onclick="menu_edit_off()" >
+        `<div id="menu-edit-frase-fundo" >
         </div> 
 
         <div class="menuConfig">
@@ -14,7 +14,7 @@ function config(){
 
             <div id="configLista">
                 <p onclick="personalizar()">Personalização</p>       
-                <p onclick="siteFavorito()">Editar site favorito</p>       
+                <p onclick="siteFavorito()">Meu favorito</p>       
             </div>
         
             <div id="configConteudo">
@@ -29,7 +29,7 @@ function config(){
 
 
 /* ==================================================
-             configOff 
+            🟡 configOff 
 ==================================================== */
 function configOff() {
     document.querySelector('.menuConfig').remove()
@@ -37,7 +37,7 @@ function configOff() {
 }
 
 /* ==================================================
-            Personalizar
+           🟡 Personalizar
 ==================================================== */
 function personalizar() {
     if (document.getElementById('personalizar') != null) {
@@ -63,23 +63,25 @@ function personalizar() {
             <h2 onclick="paisagens()" >Paisagens:</h2>
             <div id="paisagensDiv">
             </div>
+            
+            <h2 onclick="cores()" >Cores:</h2>
+            <div id="coresDiv">
+            </div>
         </div>`;
     }
 
 }
 /* ==================== Monet ========================= */
 function monet() {
-    if (document.getElementById('monetScroll') != null ){
-        document.getElementById('monetScroll').remove()
+    if (document.getElementById('imagensMonet') != null ){
+        document.getElementById('imagensMonet').remove()
     } else {
         document.getElementById('monetDiv').innerHTML += 
-        `<div id="monetScroll"> 
-             <div id="imagensMonet">
+        `<div id="imagensMonet">
 
-              </div> 
-        </div> `
-        
-              
+        </div> 
+        `
+
         var c =0
         
         for (;; ) {
@@ -90,7 +92,8 @@ function monet() {
             
             document.querySelector('#imagensMonet').innerHTML += 
             `<div class="elemento" >
-                 <img src="./img/Background/Monet/1500 x788/${c}.jpg" onclick="monet${c}()">
+                <div style="background-image: url(./img/Background/Monet/desktop/${c}.jpg);" onclick="monet${c}()" class="elemento-img">  
+                </div>
             </div>`;
         }
     }
@@ -98,14 +101,12 @@ function monet() {
 
 /* ==================== Paisagens ========================= */
 function paisagens() {
-    if (document.getElementById('paisagensScroll') != null ) {
-        document.getElementById('paisagensScroll').remove()
+    if (document.getElementById('paisagensImagens') != null ) {
+        document.getElementById('paisagensImagens').remove()
     } else {
         document.getElementById('paisagensDiv').innerHTML +=
-        `<div id="paisagensScroll">  
-            <div id="paisagensImagens">
-            
-            </div> 
+        `<div id="paisagensImagens"> 
+        
         </div>`
 
         var i = 0 
@@ -117,7 +118,8 @@ function paisagens() {
 
             document.querySelector('#paisagensImagens').innerHTML += 
             `<div id="paisagensElemento">
-                <img src="./img/Background/paisagens/${i}.jpg" onclick="paisagen${1}()" alt="">
+                <div style="background-image: url(./img/Background/paisagens/${i}.jpg);" onclick="paisagen${1}()" class="elemento-img">  
+                </div>
             </div>`
         }
     }
@@ -125,7 +127,7 @@ function paisagens() {
 
 
 /* ==================================================
-            Site favorito
+           🟡 Site favorito
 ==================================================== */
 function siteFavorito() {
     if (document.getElementById('emBreve') != null) {
@@ -140,6 +142,6 @@ function siteFavorito() {
         }
 
         document.getElementById('configConteudo').innerHTML += 
-        `<p id="emBreve"> Disponível em breve </p>`
+        `<p id="emBreve"> Disponível em breve para adicionar o link do botão "Meu Favorito" no campo de notícias. </p>`
     }
 }
