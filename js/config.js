@@ -92,12 +92,16 @@ function monet() {
             
             document.querySelector('#imagensMonet').innerHTML += 
             `<div class="elemento" >
-                <div style="background-image: url(./img/Background/Monet/desktop/${c}.jpg);" onclick="monet${c}()" class="elemento-img">  
+                <div style="background-image: url(./img/Background/Monet/desktop/${c}.jpg);" onclick="monet${c}(event)" class="elemento-img">  
                 </div>
             </div>`;
+
+            
+            
         }
     }
 }
+
 
 /* ==================== Paisagens ========================= */
 function paisagens() {
@@ -124,7 +128,6 @@ function paisagens() {
         }
     }
 }
-
 
 /* ==================================================
            🟡 Site favorito
