@@ -1,15 +1,17 @@
 var homeApp = []
 
-function home_addLink() {                                       //ERRO ERRO ERRO! ele acrescenta demasiado
+function home_addLink() {                                       
     
     homeApp.push({
         nome: "Agenda",
         link: "https://calendar.google.com/",
-        icone: "./img/icon/agenda.png"
+        icone: "./img/icon/Agenda.png"
     })
 
-    if (document.querySelector('.homeApp-user')){
-        document.querySelector('.homeApp-user').remove()            //ERRO ERRO ERRO! ele acrescenta demasiado
+    for (remove in homeApp) {
+        if (document.querySelector('.homeApp-user')){
+            document.querySelector('.homeApp-user').remove()            
+        }
     }
 
     for (imprime in homeApp) {
