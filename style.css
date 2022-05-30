@@ -124,6 +124,7 @@ div ::-webkit-scrollbar-thumb {
     top: 65px;
     display: flex;
     flex-direction: column;
+    z-index: 400;
 }
 
 #google-apps-scroll{
