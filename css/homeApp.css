@@ -1,0 +1,41 @@
+
+/* =============================================================
+     🟡   Folders and links
+============================================================== */
+
+.links {
+    position: relative;
+    margin-top: 47px;
+    margin-bottom: 58px;
+    width: 795px;
+    height: 305px;
+}
+
+.homeApp-user-div {
+    display: grid;
+    grid-template-columns: 132px 132px 132px 132px 132px 132px ;
+}
+
+#home-addLink{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    bottom: 5px;
+    position: absolute;
+}
+
+#home-addLink-img {
+    width: 40px;
+    transition: 0.1s;
+}
+
+#home-addLink-img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    width: 45px;
+    transition: 0.1s;
+} 
+

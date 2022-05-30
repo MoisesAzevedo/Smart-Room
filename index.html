@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/userAppsGoogle.css">
     <link rel="stylesheet" href="./css/menuMicro.css">
     <link rel="stylesheet" href="./css/config.css">
+    <link rel="stylesheet" href="./css/homeApp.css">
     
 </head>
 <body>
@@ -33,7 +34,7 @@
         <img src="./img/engrenagem.png" onclick="config()">
     </div>
     
-    <!--============================= Header ================================ -->
+    <!--============================= Header / Principal ================================ -->
 
     <div class="head-frase">
         <p>Welcome To Smart Room</p>
@@ -46,8 +47,15 @@
         <!-- <input type="submit" value="" class="tfbutton" src="/img/lupa.PNG">  -->
     </form>
 
-    <div class="links">
+    <div class="links">     <!-- pesquisar como fazer carrossel-->
         <p>Folders and links</p>
+        
+        <div class="homeApp-user-div">
+        </div>
+
+        <div id="home-addLink">
+            <img id="home-addLink-img" src="./img/Add.png" onclick="home_addLink()">
+        </div>
     </div>
 
     
@@ -143,6 +151,7 @@
    <script src="./js/userAppsGoogle.js"></script>
    <script src="./js/menuMicro.js"></script>
    <script src="./js/config.js"></script>
+   <script src="./js/homeApp.js"></script>
 </body>
 </html>
 
