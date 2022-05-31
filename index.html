@@ -25,7 +25,7 @@
         <img src="./img/menu.png" class="img-menu" onclick="google()">
     </div>
     
-  <div class="micro-fundo">          <!--   menuMicro.css e menuMicro.js -->
+    <div class="micro-fundo">          <!--   menuMicro.css e menuMicro.js -->
         <img src="./img/menu.png" class="img-menu" onclick="micro()">
     </div>
 
@@ -59,8 +59,17 @@
 
     
     <!-- ========================= Noticias ======================== -->
-    <h1>Notíciário</h1>
+    <div class="news-icon-div">
+        <div class="news-icon">     <!-- Botão para abrir as noticias-->     
+            <a href="#janela-noticia">
+                <img src="./img/News.png" class="img-menu" onclick="principais_noticias2()">
+            </a>
+        </div>
+    
+        <p id="news-p">Abrir Noticiário</p>
+    </div>
 
+<!-- 
     <div class="div-noticias" > 
         <a href="#janela-noticia" id="ancora-noticias">
             <div id="noticias"> 
@@ -141,10 +150,12 @@
             <button onclick="principais_noticias2()" id="button-principais-user" style="background-image: url(./img/noticias/meu\ favorito.jpg); background-size: cover;">
             </button>
         </a>
-    </div>
+    </div> -->
 <!-- ================================- impressões por funções js ==================================    -->
+<!-- AS divs que são impressas pelo js, estão sendo criadas abaixo dos scripts (exceto os iframes)-->
 
-<!-- AS divs que são impressas pelo js, estão sendo criadas abaixo dos scripts-->
+<div class="main">
+</div>
 
    <script src="./script.js"></script>
    <script src="./js/frase.js"></script>
@@ -154,7 +165,4 @@
    <script src="./js/homeApp.js"></script>
 </body>
 </html>
-
-
-
 

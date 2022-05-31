@@ -6,6 +6,24 @@
 /* ======================================
       🟡  Funções: iframes de noticias
 ====================================== */
+var news_head = ` 
+    <div class="news-head">
+        <img src="./img/menuBarras.png" alt="">
+
+        <a href="#janela-noticia">
+            <p onclick="noticias()">Tecnologia</p>
+            <p onclick="noticiasA()">Techradar</p>
+            <p onclick="noticias2()">Diversas</p>
+            <p onclick="noticiasB()">Internacinal</p>
+            <p onclick="noticias3()">Dinheiro</p>
+            <p onclick="noticiasC()">SturtUp</p>
+            <p onclick="principais_noticias2()">Meu Favorito</p>
+            <p onclick="principais_noticias()">Mais Noticias</p>
+        </a>    
+
+        <button onclick="encerrarNews()">✖</button>
+    </div>`
+
 function noticias(){
     //Remove o button Principais Noticias
               
@@ -16,9 +34,10 @@ function noticias(){
     } 
    
     //imprime o novo iframe 
-    document.querySelector('body').innerHTML += ` 
+    document.querySelector('.main').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            ${news_head}
+
             <iframe src="https://www.tecmundo.com.br/" class="iframe"></iframe> 
         </div> `    
 }
@@ -32,7 +51,8 @@ function noticias2(){
 
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()" class="botao2">Encerrar Noticias</button> 
+            ${news_head}
+
             <iframe src="https://www.cnnbrasil.com.br/" class="iframe"></iframe> 
         </div> `
 }
@@ -46,7 +66,8 @@ function noticias3(){
 
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+           ${news_head}
+
             <iframe src="https://www.infomoney.com.br/" class="iframe"></iframe> 
         </div> `
 }
@@ -63,7 +84,8 @@ function noticiasA(){
     //imprime o novo iframe 
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+           ${news_head}
+
             <iframe src="https://www.techradar.com/" class="iframe"></iframe> 
         </div> `    
 }
@@ -77,7 +99,8 @@ function noticiasB(){
 
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()" class="botao2">Encerrar Noticias</button> 
+            ${news_head}
+        
             <iframe src="https://www.bundle.app/en/breakingNews" class="iframe"></iframe> 
         </div> `
 }
@@ -90,7 +113,8 @@ function noticiasC(){
 
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            ${news_head}
+            
             <iframe src="https://startups.com.br/noticias/" class="iframe"></iframe> 
         </div> `
 }
@@ -104,21 +128,27 @@ function principais_noticias(){
     
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
+            ${news_head}
             <iframe src="https://www.bing.com/news/search?q=Brasil&nvaug=%5bNewsVertical+Category%3d%22rt_Brazil%22%5d&FORM=NSBABR" class="iframe"></iframe> 
         </div> `
 }
 /* -----------------------Botão User--------------------- */
 function principais_noticias2(){
+    if (document.querySelector('.principais2')) {
+        console.log('Opa Rapa')
+    } else {
+
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
     }
     
     document.querySelector('body').innerHTML += ` 
         <div style="width: 100%" id="janela-noticia">
-            <button onclick="encerrarNews()"  class="botao2">Encerrar Noticias</button> 
-            <iframe src="https://www.suno.com.br/artigos/" class="iframe"></iframe> 
+            ${news_head} 
+            <iframe src="https://www.suno.com.br/artigos/" class="iframe"></iframe>
+            <div style="display: none;" class="principais2"></div> 
         </div> `
+    }
 }
 
 //============= função do botão Encerrar Noticias =========== 

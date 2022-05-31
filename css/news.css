@@ -1,4 +1,123 @@
 /* =====================
+        news-icon
+===================== */
+.news-icon-div{      /* botão apps (grade bolinhas) */
+    position: absolute;
+    top: 600px;
+    left: 20px;
+    width: 255px;
+    height: 45px;
+    align-items: center;
+    display: flex;
+    border-radius: 4px;
+}
+.news-icon{      /* botão apps (grade bolinhas) */
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+}
+.news-icon:hover{             
+    background-color: grey;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.news-icon img {
+    width: 43px;
+}
+
+.news-icon:hover + #news-p {
+    opacity: 1;
+    transition: 1s;
+    width: 115px;
+    font-size: 12px;
+}
+#news-p {
+    font-size: 0;
+    opacity: 0;
+    transition: 1s;
+    cursor: default;
+    background-color: rgb(204, 223, 235);
+    border-radius: 10px;
+    color: black;
+    height: 23px;
+    width: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 5px;
+}
+
+#news-p:hover {
+    opacity: 0.6;
+    transition: 1s;
+}
+
+
+
+/* =====================
+        news-head
+===================== */
+.news-head {
+    display: flex;
+    background-color: var(--ButtonCor);
+    opacity: 0.8;
+    height: 30px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.news-head img {
+    transition: 0.1s;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.news-head img:hover {
+    cursor: pointer;
+    filter: opacity(0.7) drop-shadow(0 0 0  black);
+    transition: 0.1s;
+}
+
+/* ------------------------ */
+.news-head a{
+    display: flex;
+    color: white;
+}
+
+.news-head p {
+    margin: 10px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.news-head p:hover{
+    cursor: pointer;
+    color: var(--textoCor_hover);
+}
+
+.news-head button {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    border: none;
+    color: white;
+    width: 40px;
+    transition: 0.1s;
+}
+.news-head button:hover {
+    cursor: pointer;
+    background-color: var( --buttonOff_cor);
+    transition: 0.1s;
+}
+
+/* =====================
         noticias
 ===================== */
 .div-noticias{
@@ -103,21 +222,6 @@
     border-bottom-right-radius: 34px;
 }
 /* --------------- */
-.botao2{
-    width: 100%;
-    height: 29px;
-    background: #363636;
-    border: none;
-    color: white;
-    margin-bottom: 0;
-    opacity: 0.8;
-    
-}
-.botao2:hover{
-    background-color: grey;
-    cursor: pointer;
-}
-
 .iframe {
     width: 100%;
     height: 627px;
