@@ -93,7 +93,7 @@ function homeAdd_save(c) {
     for (imprime in homeApp1) {   
         // impede a inclusão de 18 objetos                      
         if (imprime == 18) {
-            hommeApp1 = homeApp1.splice(18)
+            homeApp1 = homeApp1.splice(18)
             localStorage.setItem('homeApp', JSON.stringify(homeApp1))
             alert('Ops! Não sobrou espaço, mas em breve teremos mais.')
             break
@@ -110,6 +110,8 @@ function homeAdd_save(c) {
             </a> 
         </div>`
     }
+
+    alert(homeApp1[imprime].nome + ' adicionado.')
 }
 
 
