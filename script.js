@@ -134,7 +134,7 @@ function principais_noticias(){
 }
 /* -----------------------Botão User--------------------- */
 function principais_noticias2(){
-    if (document.querySelector('.principais2')) {
+    if (document.querySelector('#janela-noticia')) {
         console.log('Opa Rapa')
     } else {
 

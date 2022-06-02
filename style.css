@@ -285,7 +285,7 @@ div ::-webkit-scrollbar-thumb {
     margin-top: 160px;
 }
 
-#menu-edit-frase input{
+#frase-input{
     width: 340px;
     height: 26px;
     margin-top: 17px;
@@ -294,7 +294,7 @@ div ::-webkit-scrollbar-thumb {
     padding-left: 6px;
 }
 
-#menu-edit-frase button{
+#frase-button{
     background-color: #363636;
     border: none;
     height: 39px;
@@ -305,7 +305,7 @@ div ::-webkit-scrollbar-thumb {
     margin-top: 135px;
     position: absolute;
 }
-#menu-edit-frase button:hover{
+#frase-button:hover{
   background-color: rgb(65, 83, 83);
   cursor: pointer;
 }

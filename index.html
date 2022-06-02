@@ -35,18 +35,21 @@
     </div>
     
     <!--============================= Header / Principal ================================ -->
-
-    <div class="head-frase">
+    
+    <!-- Walcome / Frase-->
+    <div class="head-frase">                    
         <p>Welcome To Smart Room</p>
         <h1 id="h1-id" onclick="fraseEdit()">Dê mais um passo na direção certa!</h1>
     </div>
 
+        <!-- Pesquisa-->
     <form id="pesquisa" method="get" action="https://www.google.com/search" target="_blank" >
         <button type="submit"> <img src="./img/lupa.PNG" class="lupa"></button>
         <input type="text" class="tftextinput" name="q" id="google-search" placeholder="Search"><br><br>
         <!-- <input type="submit" value="" class="tfbutton" src="/img/lupa.PNG">  -->
     </form>
 
+    <!-- Botão Add-->
     <div class="links">     <!-- pesquisar como fazer carrossel-->
         <p>Nenhum link adicionado!</p>
         <div class="homeApp-user-div">
@@ -69,88 +72,6 @@
         <p id="news-p">Abrir Noticiário</p>
     </div>
 
-<!-- 
-    <div class="div-noticias" > 
-        <a href="#janela-noticia" id="ancora-noticias">
-            <div id="noticias"> 
-                <section id="noticias1">
-                    <img src="./img/noticias/techmund.jpg"  >
-                    
-                    <div id="hover-news" onclick="noticias()" >
-                        <div id="div-news"></div>
-                        
-                        <h1 >Tecnologia</h1>
-                    </div>
-                </section>
-
-                <section id="noticias2">
-                    <img src="./img/noticias/cnnBrasil.jpg" >
-                    
-                    <div id="hover-news" onclick="noticias2()">
-                        <div id="div-news"></div>
-                        
-                        <h1 >Diversas</h1>
-                    </div>
-                </section>
-                
-                <section id="noticias3">
-                    <img src="./img/noticias/IM.png" >
-                    
-                    <div id="hover-news" onclick="noticias3()">
-                        <div id="div-news"></div>
-                        
-                        <h1 >Dinheiro</h1>
-                    </div>
-                </section>
-            </div>
-        </a>
-        
-        <a href="#janela-noticia" id="ancora-noticias2">
-            <div id="noticias"> 
-                <section id="noticiasA">
-                    <img src="./img/noticias/techradar.png"  >
-                    
-                    <div id="hover-news" onclick="noticiasA()" >
-                        <div id="div-news"></div>
-                        
-                        <h1 >Tech - exterior</h1>
-                    </div>
-                </section>
-
-                <section id="noticiasB">
-                    <img src="./img/noticias/bundle.jpg" >
-                    
-                    <div id="hover-news" onclick="noticiasB()">
-                        <div id="div-news"></div>
-                        
-                        <h1 >internacional</h1>
-                    </div>
-                </section>
-                
-                <section id="noticiasC">
-                    <img src="./img/noticias/sturtup.jpg" >
-                    
-                    <div id="hover-news" onclick="noticiasC()">
-                        <div id="div-news"></div>
-                        
-                        <h1 >SturtUp</h1>
-                    </div>
-                </section>
-            </div>
-        </a>
-    </div>
-
-    
-    <div class="div-principais">
-        <a href="#janela-noticia" class="ancora-principais" > 
-            <button onclick="principais_noticias()" id="button-principais" style="background-image: url(./img/noticias/mais\ noticias.jpg); background-size: cover;" >
-                <img src="" alt="">
-            </button>
-            
-            <button onclick="principais_noticias2()" id="button-principais-user" style="background-image: url(./img/noticias/meu\ favorito.jpg); background-size: cover;">
-            </button>
-        </a>
-    </div> -->
 <!-- ================================- impressões por funções js ==================================    -->
 <!-- AS divs que são impressas pelo js, estão sendo criadas abaixo dos scripts (exceto os iframes)-->
 
@@ -165,4 +86,3 @@
    <script src="./js/homeApp.js"></script>
 </body>
 </html>
-

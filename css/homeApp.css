@@ -43,3 +43,50 @@
     transition: 0.1s;
 } 
 
+/* =============================================================
+     🟡   Menu
+============================================================== */
+#menu-homeApp {
+    background-color: white;
+    border-radius: 9px;
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    position: fixed;
+    width: 409px;
+    height: 249px;
+    box-shadow: 1px 1px 8px 0px #000000;
+    margin-top: 160px;
+}
+
+#menu-homeApp h2 {
+    margin-bottom: 3px;
+}
+
+#frase-input, #frase-input2, #icone {
+    width: 340px;
+    height: 26px;
+    margin-top: 17px;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding-left: 6px;
+}
+
+#homeApp-button{
+    background-color: #363636;
+    border: none;
+    height: 39px;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    margin-top: 211px;
+    position: absolute;
+}
+#homeApp-button:hover{
+  background-color: rgb(65, 83, 83);
+  cursor: pointer;
+}
+
