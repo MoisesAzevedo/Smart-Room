@@ -8,6 +8,7 @@
     --ButtonCor_hover: rgb(65, 83, 83);
     --appHover: rgb(148 221 221);
     --buttonOff_cor: rgb(170, 2, 2);
+    --boxShadow: 1px 1px 8px 0px #000000;
     
 
 }
@@ -223,7 +224,7 @@ div ::-webkit-scrollbar-thumb {
     position: absolute;
     bottom: 0;
     display: none;
-    background-color: rgb(148 221 221);
+    background-color: rgb(18, 128, 128);
     opacity: 0.5 ;
 }
 

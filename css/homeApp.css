@@ -20,6 +20,11 @@
     grid-template-columns: 132px 132px 132px 132px 132px 132px ;
 }
 
+.homeApp-user-div p{
+    color: white;
+    font-weight: bold;
+}
+
 #home-addLink{
     width: 25px;
     height: 25px;

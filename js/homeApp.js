@@ -37,7 +37,7 @@ if (homeApp != null){
             <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                 <div class="icones-view">
                     <img src="${homeApp1[imprime].icone}">
-                    <p>${homeApp1[imprime].nome} ${imprime}</p>
+                    <p>${homeApp1[imprime].nome}</p>
                 </div>
                 <div class="icones-fundo">  </div>
             </a> 
