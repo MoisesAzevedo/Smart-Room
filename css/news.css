@@ -31,17 +31,19 @@
 
 .news-icon:hover + #news-p {
     opacity: 1;
-    transition: 1s;
+    transition: 0.4s;
     width: 115px;
     font-size: 12px;
 }
 #news-p {
     font-size: 0;
     opacity: 0;
-    transition: 1s;
+    transition: 0.3s;
     cursor: default;
     background-color: rgb(204, 223, 235);
     border-radius: 10px;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1px;
     color: black;
     height: 23px;
     width: 0;
@@ -53,7 +55,7 @@
 
 #news-p:hover {
     opacity: 0.6;
-    transition: 1s;
+    transition: 0.4s;
 }
 
 
@@ -337,4 +339,13 @@
     box-shadow: 1px 1px 8px 0px #000000;
 }
 
-/* ========================================== */
+
+/* ===========================================================================================================
+                    RESPONSIV: HEIGHT 1000px
+=========================================================================================================== */
+
+@media screen and (max-height: 2000px){
+    .iframe {
+        height: 1000px;
+    }
+}
