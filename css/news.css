@@ -65,7 +65,7 @@
 ===================== */
 .news-head {
     display: flex;
-    background-color: var(--ButtonCor);
+    background-color: var(--buttonCor);
     opacity: 0.8;
     height: 30px;
     align-items: center;

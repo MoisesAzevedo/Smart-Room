@@ -4,8 +4,8 @@
 :root {
     --textoCor: #161616; 
     --textoCor_hover: rgb(195, 255, 255);
-    --ButtonCor: #363636;
-    --ButtonCor_hover: rgb(65, 83, 83);
+    --buttonCor: #363636;
+    --buttonCor_hover: rgb(65, 83, 83);
     --appHover: rgb(148 221 221);
     --buttonOff_cor: rgb(170, 2, 2);
     --boxShadow: 1px 1px 8px 0px #000000;
@@ -50,7 +50,7 @@ a {
 }
 
 button {
-    background-color: var(--ButtonCor);
+    background-color: var(--buttonCor);
 }
 
 /* ===================== ScrollBars ================ */
@@ -195,7 +195,7 @@ div ::-webkit-scrollbar-thumb {
     justify-content: center;
     font-size: 12px;
     position: relative;
-    margin: 9px;
+    margin: 0;
 }
 
 .icones-view{

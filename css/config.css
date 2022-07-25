@@ -43,7 +43,7 @@
 #configHead {
     position: absolute;
     display: flex;
-    background-color: var(--ButtonCor);
+    background-color: var(--buttonCor);
     width: 100%;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
