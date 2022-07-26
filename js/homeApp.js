@@ -128,59 +128,50 @@ function homeApps_off() {                               //frase.js
 
 function editApp(imp) {
     var menu_editApp =  `
-    "<div class="menu-editApp">
+    <div class="menu-editApp">
         <button id='edit-editApp'>Editar</button>
         <button id='exclui-editApp' onclick="exclui_editApp(${imp})">Excluir</button>
-    </div>,`
+    </div>`
  
 
     var homeApp = localStorage.getItem('homeApp')
-    if (homeApp != null){
-        var homeApp1 = JSON.parse(homeApp)
-        
-       /*  homeApp1.splice(imp, 0)
+    var homeApp1 = JSON.parse(homeApp)             
 
-        console.log(homeApp1)
-        localStorage.setItem('homeApp', JSON.stringify(homeApp1)) */
-    
-        for (remove in homeApp) {                           // Remove tudo
-            if (document.querySelector('.homeApp-user')){
-                document.querySelector('.homeApp-user').remove()            
-            }
+    for (remove in homeApp) {                           // Remove tudo
+        if (document.querySelector('.homeApp-user')){
+            document.querySelector('.homeApp-user').remove()            
         }
-    
-        for (imprime in homeApp1) {                         //Cria tudo atualizado
-            
-            if (imprime == imp){            //tentando criar a condição para encontrar o array da questão.
-                document.querySelector('.homeApp-user-div').innerHTML += 
-                `<div class="homeApp-user">
-                    <a href="${homeApp1[imp].link}" target="_blank" class="icones">  
-                        <div class="icones-view">
-                            <img src="${homeApp1[imp].icone}">
-                            <p>${homeApp1[imp].nome}</p>
-                        </div>
-                        <div class="icones-fundo">  </div>
-                    </a> 
-                    <p class='edit-app' onclick='editApp(${imp})'>⁝</p>
-                    ${menu_editApp}
-                </div>
-               `
-            } else {
-                document.querySelector('.homeApp-user-div').innerHTML += 
-                `<div class="homeApp-user">
-                    <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
-                        <div class="icones-view">
-                            <img src="${homeApp1[imprime].icone}">
-                            <p>${homeApp1[imprime].nome}</p>
-                        </div>
-                        <div class="icones-fundo">  </div>
-                    </a> 
-                    <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
-                </div>`
-            }
+    }
+
+    for (imprime in homeApp1) {                         //Cria tudo atualizado
+        
+        if (imprime == imp){            //tentando criar a condição para encontrar o array da questão.
+            document.querySelector('.homeApp-user-div').innerHTML += 
+            `<div class="homeApp-user">
+                <a href="${homeApp1[imp].link}" target="_blank" class="icones">  
+                    <div class="icones-view">
+                        <img src="${homeApp1[imp].icone}">
+                        <p>${homeApp1[imp].nome}</p>
+                    </div>
+                    <div class="icones-fundo">  </div>
+                </a> 
+                <p class='edit-app' onclick='editApp(${imp})'>⁝</p>
+                ${menu_editApp}
+            </div>
+            `
+        } else {
+            document.querySelector('.homeApp-user-div').innerHTML += 
+            `<div class="homeApp-user">
+                <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
+                    <div class="icones-view">
+                        <img src="${homeApp1[imprime].icone}">
+                        <p>${homeApp1[imprime].nome}</p>
+                    </div>
+                    <div class="icones-fundo">  </div>
+                </a> 
+                <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
+            </div>`
         }
-    } else {
-        var homeApp1 = []
     }
 }
 
@@ -188,9 +179,8 @@ function exclui_editApp(imp2) {
  
 
     var homeApp = localStorage.getItem('homeApp')
-    if (homeApp != null){
-        var homeApp1 = JSON.parse(homeApp)
-    }
+    var homeApp1 = JSON.parse(homeApp)
+
 
     var exclui_editApp = confirm('Tem certeza que deseja excluir ' + homeApp1[imp2].nome)
 
@@ -210,14 +200,6 @@ function exclui_editApp(imp2) {
     
         //Cria tudo atualizado 
         for (imprime in homeApp1) {   
-            // impede a inclusão de 18 objetos                      
-            if (imprime == 18) {
-                homeApp1 = homeApp1.splice(18)
-                localStorage.setItem('homeApp', JSON.stringify(homeApp1))
-                alert('Ops! Não sobrou espaço, mas em breve teremos mais.')
-                break
-            }
-    
             document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
@@ -230,6 +212,8 @@ function exclui_editApp(imp2) {
                 <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
             </div>`
         }   
+    } else {
+        alert(homeApp1[imp2].nome + ' intácto. (hehe)')
     }
 }
 
