@@ -31,7 +31,7 @@ if (frase != null) {
 function fraseEdit() {
 
     if (frase != null) { 
-        document.querySelector('.head-frase').innerHTML += 
+        document.querySelector('body').innerHTML += 
         `  <div id="menu-edit-frase-fundo" onclick="menu_edit_off()" ></div>
             <div id="menu-edit-frase">
                 <h2>Editar frase</h2>
@@ -40,7 +40,7 @@ function fraseEdit() {
             </div> 
         `
     } else { 
-        document.querySelector('.head-frase').innerHTML += 
+        document.querySelector('body').innerHTML += 
         `  <div id="menu-edit-frase-fundo" onclick="menu_edit_off()" ></div>
             <div id="menu-edit-frase">
                 <h2>Editar frase</h2>

@@ -1,5 +1,8 @@
+
+
+
 /* =============================================================
-        🟡Botão engrenagem
+🟡Botão engrenagem
 ============================================================== */
 .config-fundo{      /* botão configurações */
     position: absolute;
@@ -111,6 +114,10 @@
     height: 100%;
 }
 
+#personalizar h2 {
+    width: 128px;
+}
+
 /* ======= Monet ====  */
 #monetScroll {
     overflow-y: scroll;
@@ -175,4 +182,18 @@
     justify-content: center;
 }
 
+/* fim do  media */
+ 
+/* =====================================================================
+            Responsividade height  min 950px
+===================================================================== */
+@media screen and (min-height: 950px){
+    .menuConfig {
+        height: 855px;
+    }
 
+    #configConteudo {
+        margin-top: 58px;
+        height: 746px;
+    }
+}

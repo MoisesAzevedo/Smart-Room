@@ -117,7 +117,6 @@ function homeAdd_save(c) {
         </div>`
     }
 
-    alert(homeApp1[imprime].nome + ' adicionado.')
 }
 
 
