@@ -81,23 +81,39 @@ function monet() {
 
         </div> 
         `
+        /* ================ busca as img no localStorage e imprime > else{ faz o push} e imprime ===== */
+        var monetArray0 = localStorage.getItem('monet')
+        if (monetArray0 != null) {
+            var monetArray = JSON.parse(monetArray0)
+            
+            for (imprime in monetArray) {
+                document.querySelector('#imagensMonet').innerHTML += monetArray[imprime].img;
+            }
+        } else {
+            var monetArray = []
+           
+            var i = 0 
+            
+            for (;;) {
+                i++; 
+               
+                if (i > 32 ) break;
+                
+                monetArray.push({
+                    
+                    img: `<div id="paisagensElemento" onclick='alteraFundo_monet(${i})'>
+                    <div style="background-image: url(./img/Background/Monet/desktop/${i}.jpg);" class="elemento-img">  
+                    </div>
+                    </div>`
+                }) 
+            }
 
-        var c =0
-        
-        for (;; ) {
-            c++; 
-            if (c > 32 ) break;
-            console.log(c);
-            console.log('VAI');
             
-            document.querySelector('#imagensMonet').innerHTML += 
-            `<div class="elemento" >
-                <div style="background-image: url(./img/Background/Monet/desktop/${c}.jpg);" onclick="monet${c}(event)" class="elemento-img">  
-                </div>
-            </div>`;
+            for (imprime in monetArray) {
+                document.querySelector('#imagensMonet').innerHTML += monetArray[imprime].img;
+            }
 
-            
-            
+            localStorage.setItem('monet', JSON.stringify(monetArray))
         }
     }
 }
@@ -113,20 +129,136 @@ function paisagens() {
         
         </div>`
 
-        var i = 0 
+        /* ================ busca as img no localStorage e imprime > else{ faz o push} e imprime ===== */
+        var paisagemArray0 = localStorage.getItem('paisagem')
+        if (paisagemArray0 != null) {
+            var paisagemArray = JSON.parse(paisagemArray0)
+            
+            for (imprime in paisagemArray) {
+                document.querySelector('#paisagensImagens').innerHTML += paisagemArray[imprime].img;
+            }
+        } else {
+            var paisagemArray = []
+            console.log(paisagemArray)
 
-        for (;;) {
-            i++;
+            var i = 0 
+            for (;;) {
+                i++; 
+                
+                if (i > 20 ) break;
+                
+                
+                paisagemArray.push({
+                    
+                    img: `<div id="paisagensElemento" onclick='alteraFundo(${i})'>
+                    <div style="background-image: url(./img/Background/paisagens/${i}.jpg);" class="elemento-img">  
+                    </div>
+                    </div>`
+                }) 
+            }
+            
+            for (imprime in paisagemArray) {
+                document.querySelector('#paisagensImagens').innerHTML += paisagemArray[imprime].img;
+            }
 
-            if (i > 20 ) break;
-
-            document.querySelector('#paisagensImagens').innerHTML += 
-            `<div id="paisagensElemento">
-                <div style="background-image: url(./img/Background/paisagens/${i}.jpg);" onclick="paisagen${1}()" class="elemento-img">  
-                </div>
-            </div>`
+            localStorage.setItem('paisagem', JSON.stringify(paisagemArray))
         }
     }
+}
+
+/* ==================================================
+           🟡 function Alterar fundo paisagem/monet
+==================================================== */
+function alteraFundo(i){
+    var indice = i - 1 //i começa valendo 1, portanto usaremos a var indice para referenciar o indice do objeto
+
+    var paisagemArray0 = localStorage.getItem('paisagem')
+    var paisagemArray = JSON.parse(paisagemArray0)
+
+    //manda o número da selecionada para o localStorage para ser buscada na impressão automática
+    localStorage.removeItem('paisagemSelecionada') //remove o que tava
+    var paisagemSelecionada = i;     
+    localStorage.setItem('paisagemSelecionada', JSON.stringify(paisagemSelecionada))
+
+    document.querySelector('.background-img').remove();
+    localStorage.removeItem('monetSelecionada') //para a chave ficar nula, e não executar a impressão automatica dela
+    
+
+    document.querySelector('.fundoBody').innerHTML+= 
+    `<div style="background-image: url(./img/Background/paisagens/${paisagemSelecionada}.jpg);" class="background-img">
+    </div>`
+}
+/*================ Monet============== */
+function alteraFundo_monet(i){
+    var indice = i - 1 //i começa valendo 1, portanto usaremos a var indice para referenciar o indice do objeto (no caso, usaremos o i só para referenciar a imagem [])
+
+    var monetArray0 = localStorage.getItem('monet')
+    var monetArray = JSON.parse(monetArray0)
+
+    /* == Cria um seletor em cima da imagem selecionada */
+    for (remove in monetArray) {                           // Remove tudo
+        if (document.querySelector('#paisagensElemento')){
+            document.querySelector('#paisagensElemento').remove()             
+        }
+    } 
+
+    /* var monetArray = [] */
+            
+    var i = 0 
+    for (;;) {
+       i++; 
+      
+       if (i > 32 ) break;
+
+        for (imprime in monetArray) {
+            if (imprime = indice){
+                document.querySelector('#imagensMonet').innerHTML += 
+                `<div id="paisagensElemento" onclick='alteraFundo_monet(${i})'>
+                    <div style="background-image: url(./img/Background/Monet/desktop/${i}.jpg);" class="elemento-img">  
+                    </div>
+                    <p>💚</p>
+                </div>`
+            } else {
+                document.querySelector('#imagensMonet').innerHTML += monetArray[imprime].img;
+            }
+        }
+    }   
+
+   
+
+    /* ======= manda o número da selecionada para o localStorage, para ser buscada na impressão automática ====== */
+    localStorage.removeItem('monetSelecionada') //remove o nº que ja tava
+    var monetSelecionada = i;     
+    localStorage.setItem('monetSelecionada', JSON.stringify(monetSelecionada))
+
+    document.querySelector('.background-img').remove();
+    localStorage.removeItem('paisagemSelecionada') //remover a chave no caso de paisagem selecionada anteriormente,  e assim não executar a impressão automatica dela
+
+    document.querySelector('.fundoBody').innerHTML+= 
+    `<div style="background-image: url(./img/Background/Monet/desktop/${monetSelecionada}.jpg);" class="background-img">
+    </div>`
+}
+
+/* =====================Imprime automáticamente o fundo novo (paisagem / monet) ==================== */
+var paisagemSelecionada0 = localStorage.getItem('paisagemSelecionada');
+if (paisagemSelecionada0 != null){
+    var paisagemSelecionada = JSON.parse(paisagemSelecionada0);
+    
+    document.querySelector('.background-img').remove();
+    document.querySelector('.fundoBody').innerHTML+= 
+    `<div style="background-image: url(./img/Background/paisagens/${paisagemSelecionada}.jpg);" class="background-img">
+    </div>`
+}
+
+/* =====monet========*/
+var monetSelecionada0 = localStorage.getItem('monetSelecionada');
+if (monetSelecionada0 != null){
+    var monetSelecionada = JSON.parse(monetSelecionada0);
+    
+    document.querySelector('.background-img').remove();
+    document.querySelector('.fundoBody').innerHTML+= 
+    `<div style="background-image: url(./img/Background/Monet/desktop/${monetSelecionada}.jpg);" class="background-img">
+    </div>`
 }
 
 /* ==================================================

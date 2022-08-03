@@ -76,7 +76,7 @@
 
 .menuConfig h2:hover{
     cursor: pointer;
-    color: rgb(0, 107, 107);
+    color: var(--textoCor_hover2);
 }
    
 /* ======= Lista ====  */
@@ -91,7 +91,7 @@
 
 #configLista p:hover {
     cursor: pointer;
-    color: rgb(0, 107, 107);
+    color: var(--textoCor_hover2);
 }
 
 /* ======= Conteudo ====  */
@@ -116,6 +116,7 @@
 
 #personalizar h2 {
     width: 128px;
+    font-weight: 100;
 }
 
 /* ======= Monet ====  */

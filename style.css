@@ -4,6 +4,7 @@
 :root {
     --textoCor: #161616; 
     --textoCor_hover: rgb(195, 255, 255);
+    --textoCor_hover2: rgb(123, 168, 168);
     --buttonCor: #363636;
     --buttonCor_hover: rgb(65, 83, 83);
     --appHover: rgb(148 221 221);

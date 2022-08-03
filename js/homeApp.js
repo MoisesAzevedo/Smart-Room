@@ -231,9 +231,9 @@ function edit_editApp(imp3) {
 
         <form id="menu-homeApp" onsubmit="editSave(event, ${imp3})">
             <h2>Editar app</h2>
-            <input type="text"  id="frase-input" name="link" placeholder="${homeApp1[imp3].link}">
-            <input type="text"  id="frase-input2" name="nome" placeholder="${homeApp1[imp3].nome}">
-            <input type="text"  id="icone" name="icone" placeholder="${homeApp1[imp3].icone}">
+            <input type="text"  id="frase-input" name="link" placeholder="${homeApp1[imp3].link}" value="${homeApp1[imp3].link}" >
+            <input type="text"  id="frase-input2" name="nome" placeholder="${homeApp1[imp3].nome}" value="${homeApp1[imp3].nome}" >
+            <input type="text"  id="icone" name="icone" placeholder="${homeApp1[imp3].icone}" value="${homeApp1[imp3].icone}" >
             <button type="submit" id="homeApp-button">Salvar</button>
         </form> `
       
