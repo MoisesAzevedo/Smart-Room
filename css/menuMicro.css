@@ -50,6 +50,22 @@
     margin-left: 9px;
 }
 
+
+#micro-in-scroll-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#micro-in-scroll-div input{
+    color: black;
+    margin: 0;
+    margin-top: 6px;
+    width: 69px;
+    text-align: center;
+    border: none;
+    background: none;
+}
+
 #img-micro {
     margin-right: 11px;
 }

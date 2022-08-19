@@ -33,16 +33,20 @@ function desenhaTabela() {
             }
         }
 
-        for (imprime in homeApp1) {                         //Cria tudo atualizado
+        for (imprime in homeApp1) {                         //Cria tudo atualizado //a estrutura a seguir se repete 5 vezes nesse arquivo. Penso que seria melhor colocar a estrutura em uma variável
             document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">
-                        <p>${homeApp1[imprime].nome}</p>
+                        <img src="${homeApp1[imprime].icone}">   
                     </div>
                     <div class="icones-fundo">  </div>
                 </a> 
+
+                <form onsubmit="nameApp_edit(event, ${imprime})">
+                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
+                </form>
+
                 <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
             </div>`
         }
@@ -52,6 +56,27 @@ function desenhaTabela() {
 }
 
 desenhaTabela()
+
+
+
+/* =============================================================
+                Edita nome direto no input (home)
+============================================================== */
+function nameApp_edit(e, impr){
+    e.preventDefault()
+    console.log(impr)
+    console.log(e)
+
+    var homeApp = localStorage.getItem('homeApp');
+    var homeApp1 = JSON.parse(homeApp);  
+
+    console.log(e.target.elements)
+
+    homeApp1[impr].nome = e.target.elements['nameApp'].value;
+
+    localStorage.setItem('homeApp', JSON.stringify(homeApp1))
+    desenhaTabela()
+}
 
 /* =============================================================
                 Save new app
@@ -104,17 +129,21 @@ function homeAdd_save(c) {
             break
         }
 
-        document.querySelector('.homeApp-user-div').innerHTML += 
-        `<div class="homeApp-user">
-            <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
-                <div class="icones-view">
-                    <img src="${homeApp1[imprime].icone}">
-                    <p>${homeApp1[imprime].nome}</p>
-                </div>
-                <div class="icones-fundo">  </div>
-            </a> 
-            <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
-        </div>`
+         document.querySelector('.homeApp-user-div').innerHTML += 
+            `<div class="homeApp-user">
+                <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
+                    <div class="icones-view">
+                        <img src="${homeApp1[imprime].icone}">   
+                    </div>
+                    <div class="icones-fundo">  </div>
+                </a> 
+
+                <form onsubmit="nameApp_edit(event, ${imprime})">
+                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
+                </form> 
+
+                <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
+            </div>`
     }
 
 }
@@ -149,29 +178,37 @@ function editApp(imp) {
     for (imprime in homeApp1) {                         //Cria tudo atualizado
         
         if (imprime == imp){            //tentando criar a condição para encontrar o array da questão.
-            document.querySelector('.homeApp-user-div').innerHTML += 
+           document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
-                <a href="${homeApp1[imp].link}" target="_blank" class="icones">  
+                <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imp].icone}">
-                        <p>${homeApp1[imp].nome}</p>
+                        <img src="${homeApp1[imprime].icone}">   
                     </div>
                     <div class="icones-fundo">  </div>
                 </a> 
+                
+                <form onsubmit="nameApp_edit(event, ${imprime})">
+                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
+                </form>
+                
                 <p class='edit-app' onclick='editApp(${imp})'>⁝</p>
+                
                 ${menu_editApp}
-            </div>
-            `
+            </div>`
         } else {
             document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">
-                        <p>${homeApp1[imprime].nome}</p>
+                        <img src="${homeApp1[imprime].icone}">   
                     </div>
                     <div class="icones-fundo">  </div>
                 </a> 
+
+                <form onsubmit="nameApp_edit(event, ${imprime})">
+                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
+                </form>
+                
                 <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
             </div>`
         }
@@ -207,11 +244,15 @@ function exclui_editApp(imp2) {
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">
-                        <p>${homeApp1[imprime].nome}</p>
+                        <img src="${homeApp1[imprime].icone}">   
                     </div>
                     <div class="icones-fundo">  </div>
-                </a> 
+                </a>
+
+                <form onsubmit="nameApp_edit(event, ${imprime})">
+                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
+                </form> 
+
                 <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
             </div>`
         }   

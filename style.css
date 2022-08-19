@@ -189,7 +189,7 @@ div ::-webkit-scrollbar-thumb {
 
 .icones{
     width: 84px;
-    height: 90px;
+    height: 67px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,12 +212,6 @@ div ::-webkit-scrollbar-thumb {
     width: 50px;
 }
 
-.icones p{
-    color: black;
-    margin: 0;
-    margin-top: 6px;
-}
-
 .icones-fundo {
     height: 90px;
     width: 90px;
@@ -227,6 +221,8 @@ div ::-webkit-scrollbar-thumb {
     display: none;
     background-color: rgb(18, 128, 128);
     opacity: 0.5 ;
+    top: 0;
+    z-index: -1;
 }
 
 .icones-view:hover + .icones-fundo{

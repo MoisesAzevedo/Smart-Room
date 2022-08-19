@@ -83,13 +83,16 @@ function micro(){
         for (microImprime in formsMicro0){
             document.querySelector('#micro-in-scroll').innerHTML += 
             `
-            <a href="${formsMicro0[microImprime].link}" target="_blank" class="icones">  
-                <div class="icones-view" >
+            <div id="micro-in-scroll-div">
+                <a href="${formsMicro0[microImprime].link}" target="_blank" class="icones">  
+                    <div class="icones-view" >
                     <img id="img-micro" src="${formsMicro0[microImprime].icone}" style="${formsMicro0[microImprime].zeraMargin }" >
-                    <p>${formsMicro0[microImprime].nome}</p>
-                </div>
-                <div class="icones-fundo">  </div>
-            </a> 
+                    
+                    </div>
+                    <div class="icones-fundo">  </div>
+                </a>
+                <input value="${formsMicro0[microImprime].nome}"></input> 
+            </div>
             `
         }
     }

@@ -15,19 +15,42 @@
     justify-content: center;
 }
 .homeApp-user {
-    width: 84px;
-    height: 90px;
     margin: 3px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .homeApp-user-div {
     display: grid;
     grid-template-columns: 132px 132px 132px 132px 132px 132px ;
+    
 }
 
 .homeApp-user-div p{
     color: white;
     font-weight: bold;
+}
+
+.nameApp{
+    width: 82px;
+    text-align: center;
+    transition: 100ms;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 32px;
+    z-index: -1;               /*o z-index não ta funfando*/
+}
+
+.nameApp:hover{
+    width: 190px;
+    transition: 100ms;
+    z-index: 2;
+    background-color: var(--buttonCor);
 }
 
 .edit-app{                     /*  botãozinho de editar os apps */
@@ -36,9 +59,11 @@
     width: 7px;
     height: 25px;
     top: -86px;
+    left: -34px;
     margin: 0;
     opacity: 0.5;
     z-index: 2;
+    
 }
 
 .icones-fundo{
@@ -130,15 +155,15 @@
 
     border-radius: 4px;
     width: 50px;
-    background-color: white; /* atualizar */
+    background-color: white;
     font-size: 11px;
     justify-content: center;
     align-items: center;
-    position: relative;
-    height: 30px;
+    position: absolute;
+    height: 50px;
     z-index: 5;
-    margin: auto;
-    bottom: 100px;
+    top: 20px;
+   
 }
 
 
