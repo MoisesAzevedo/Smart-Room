@@ -163,8 +163,9 @@ function editApp(imp) {
     <div class="menu-editApp">
         <button id='edit-editApp' onclick="edit_editApp(${imp})">Editar</button>
         <button id='exclui-editApp' onclick="exclui_editApp(${imp})">Excluir</button>
-    </div>`
- 
+    </div>
+    
+    <div id="fundo-editApp" onclick="menu_editAppRemove()"></div>`
 
     var homeApp = localStorage.getItem('homeApp')
     var homeApp1 = JSON.parse(homeApp)             
@@ -178,7 +179,7 @@ function editApp(imp) {
     for (imprime in homeApp1) {                         //Cria tudo atualizado
         
         if (imprime == imp){            //tentando criar a condição para encontrar o array da questão.
-           document.querySelector('.homeApp-user-div').innerHTML += 
+        document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
@@ -215,8 +216,9 @@ function editApp(imp) {
     }
 }
 
+
 function exclui_editApp(imp2) {
- 
+
 
     var homeApp = localStorage.getItem('homeApp')
     var homeApp1 = JSON.parse(homeApp)
@@ -225,8 +227,6 @@ function exclui_editApp(imp2) {
     var exclui_editApp = confirm('Tem certeza que deseja excluir ' + homeApp1[imp2].nome)
 
     if (exclui_editApp == true){
-        alert(homeApp1[imp2].nome + ' excluído')
-
         homeApp1.splice(imp2, 1)
 
         localStorage.setItem('homeApp', JSON.stringify(homeApp1))
@@ -276,8 +276,7 @@ function edit_editApp(imp3) {
             <input type="text"  id="frase-input2" name="nome" placeholder="${homeApp1[imp3].nome}" value="${homeApp1[imp3].nome}" >
             <input type="text"  id="icone" name="icone" placeholder="${homeApp1[imp3].icone}" value="${homeApp1[imp3].icone}" >
             <button type="submit" id="homeApp-button">Salvar</button>
-        </form> `
-      
+        </form> `     
 }
 
 
@@ -309,5 +308,14 @@ function editSave(e, imp3) {
     
 
     localStorage.setItem('homeApp', JSON.stringify(homeApp1))
+    desenhaTabela()
+}
+
+/* ===============================================================
+    Remove o menuzinho (sem clicar em Edit ou exclui)
+=============================================================== */
+
+function menu_editAppRemove(){
+    document.querySelector(".menu-editApp").remove()
     desenhaTabela()
 }

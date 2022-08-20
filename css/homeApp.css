@@ -32,6 +32,28 @@
 .homeApp-user-div p{
     color: white;
     font-weight: bold;
+    width: 10px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 20px;
+    transition: 100ms;
+}
+
+.homeApp-user-div p:hover{
+    color: white;
+    font-weight: bold;
+    background-color: grey;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 20px;
+    transition: 100ms;
 }
 
 .nameApp{
@@ -64,6 +86,17 @@
     opacity: 0.5;
     z-index: 2;
     
+}
+
+#fundo-editApp{
+    background-color: grey;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-radius: 10px;
+    opacity: 0.5;
 }
 
 .icones-fundo{
