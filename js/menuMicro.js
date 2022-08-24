@@ -72,6 +72,7 @@ function micro(){
             <div id="micro-apps-scroll">
                 <div id="micro-in-scroll">
                 </div>
+
                 <button id="addGoogle-button" onclick="userAppsMicro()"> Adicionar apps da Microsoft </button>
             </div>
             <form action="https://www.office.com/apps?auth=1" target="_blank">
@@ -81,8 +82,7 @@ function micro(){
         </div>
         `
         for (microImprime in formsMicro0){
-            document.querySelector('#micro-in-scroll').innerHTML += 
-            `
+            document.querySelector('#micro-in-scroll').innerHTML += `
             <div id="micro-in-scroll-div">
                 <a href="${formsMicro0[microImprime].link}" target="_blank" class="icones">  
                     <div class="icones-view" >
@@ -91,9 +91,8 @@ function micro(){
                     </div>
                     <div class="icones-fundo">  </div>
                 </a>
-                <input value="${formsMicro0[microImprime].nome}"></input> 
-            </div>
-            `
+                <input value="${formsMicro0[microImprime].nome}" class="nameAppMicro"></input> 
+            </div> `
         }
     }
     /* ---------------------------------------------------- */

@@ -156,162 +156,110 @@ function encerrarNews(){
     document.querySelector('#janela-noticia').remove();
 }
 
-/* ======================================
-      🟡  Funções dos botões menu
-====================================== */
+/* ===================================================================
+      🟡  Funções dos botões menu Google (Mincrosof: menuMicro.js)
+=================================================================== */
 
 //Google:
+
+var formsGoogle0 = [
+    {
+        icone: 'https://www.gstatic.com/images/branding/product/1x/docs_2020q4_48dp.png',
+        nome: 'Documentos',
+        link: 'https://docs.google.com/'
+    },
+    {
+        icone: 'https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png',
+        nome: 'Keep',
+        link: 'https://keep.google.com/'
+    },
+    {
+        icone: 'https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png',
+        nome: 'Planilhas',
+        link: 'https://docs.google.com/spreadsheets/u/0/'
+    },
+    {
+        icone: './img/icon/youtube.png',
+        nome: 'Youtube',
+        link: 'https://www.youtube.com/'
+    },
+    {
+        icone: 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png',
+        nome: 'Drive',
+        link: 'https://drive.google.com/'
+    },
+    {
+        icone: './img/icon/gmail.png',
+        nome: 'Gmail',
+        link: 'https://mail.google.com/'
+    },
+    {
+        icone: './img/icon/fotos.png',
+        nome: 'Fotos',
+        link: 'https://photos.google.com/'
+    },
+    {
+        icone: 'https://cdn-icons-png.flaticon.com/512/2642/2642502.png',
+        nome: 'Maps',
+        link: 'https://www.google.com.br/maps'
+    },
+    {
+        icone: './img/icon/meet.png',
+        nome: 'Meet',
+        link: 'https://meet.google.com/'
+    },
+    {
+        icone: './img/icon/tradutor.png',
+        nome: 'Tradutor',
+        link: 'https://translate.google.com.br/'
+    },
+    {
+        icone: './img/icon/noticias.png',
+        nome: 'Notícias',
+        link: 'https://news.google.com/'
+    },
+    {
+        icone: './img/icon/agenda.png',
+        nome: 'Agenda',
+        link: 'https://calendar.google.com/'
+    },
+]
+
 function google(){
     if (document.querySelector('.menu') != null ){
         document.querySelector('.menu').remove();
     } else {
         document.querySelector('body').innerHTML += `
-       <div class="menu">
+        <div class="menu">  <!-- script.js-->
             <div id="google-apps-scroll">
-                <ul>
-                    <li>
-                        <a href="https://docs.google.com/" target="_blank" class="icones" >  
-                            <div class="icones-view">
-                                <img src="https://www.gstatic.com/images/branding/product/1x/docs_2020q4_48dp.png">
-                                <p>Documentos</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li >
-
-                    <li>
-                        <a href="https://keep.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png">
-                                <p>Keep</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-
-                    <li>
-                        <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png">
-                                <p>Planilhas</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                </ul>
-            
-                <!--============================= linha 2 ============================= ================================ -->
-                <!--============================= linha 2 ============================= ================================ -->
-                <ul>
-                    <li>
-                        <a href="https://www.youtube.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/youtube.png">
-                                <p>Youtube</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png">
-                                <p>Drive</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://mail.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/gmail.png">
-                                <p>Gmail</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                </ul>
-
-                <!--============================= linha 3 ============================= ================================ -->
-                <!--============================= linha 3 ============================= ================================ -->
-                <ul>
-                    <li>
-                        <a href="https://photos.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/fotos.png">
-                                <p>Fotos</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://www.google.com.br/maps" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2642/2642502.png">
-                                <p>Maps</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://meet.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/meet.png">
-                                <p>Meet</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                </ul>
-
-                <!--============================= linha 4 ============================= ================================ -->
-                <!--============================= linha 4 ============================= ================================ -->
-                <ul>
-                    <li>
-                        <a href="https://translate.google.com.br/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/tradutor.png">
-                                <p>Tradutor</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://news.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/noticias.png">
-                                <p>Notícias</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://calendar.google.com/" target="_blank" class="icones">  
-                            <div class="icones-view">
-                                <img src="./img/icon/agenda.png">
-                                <p>Agenda</p>
-                            </div>
-                            <div class="icones-fundo">  </div>
-                        </a> 
-                    </li>
-                </ul>
-                
-                <div id="appGoogle-user-div" style="padding: 0;"> 
-            
+                <div id="google-in-scroll">
                 </div>
-                
+
                 <button id="addGoogle-button" onclick="userAppsGoogle()"> Adicionar apps do Google </button>
             </div>
+            
+            <form action="https://about.google/intl/pt-BR/products/?tab=wh#all-products" target="_blank">
+                <button id="google-button" type="submit"> Mais do Google </button>
+            </form>
+        </div> `
 
-        <form action="https://about.google/intl/pt-BR/products/?tab=wh#all-products" target="_blank">
-            <button id="google-button" type="submit"> Mais do Google </button>
-        </form>
-        
-        `
+        for (googleImprime in formsGoogle0){
+            document.querySelector('#google-in-scroll').innerHTML += `
+            <div id="google-in-scroll-div">
+                <a href="${formsGoogle0[googleImprime].link}" target="_blank" class="icones">  
+                    <div class="icones-view" >
+                    <img id="img-micro" src="${formsGoogle0[googleImprime].icone}" style="margin: 0;">
+                    
+                    </div>
+                    <div class="icones-fundo">  </div>
+                </a>
+                <input value="${formsGoogle0[googleImprime].nome}" class="nameAppMicro" ></input> 
+            </div> `
+        }
          //Imprime altomaticamente os apps do usuário
         
         
-            for (imprime2 in formsGoogle0) { 
+           /*  for (imprime2 in formsGoogle0) { 
                 document.querySelector('#appGoogle-user-div').innerHTML +=
                   `
                   <ul>
@@ -344,7 +292,7 @@ function google(){
                   </li>
               </ul>
                   `
-            }
+            } */
         
     }
 }

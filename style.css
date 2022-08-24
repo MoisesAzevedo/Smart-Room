@@ -145,6 +145,20 @@ div ::-webkit-scrollbar-thumb {
     margin-right: 4px;
 }
 
+#google-in-scroll {        /*os apps estão numa div dentro do scroll */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 14px;
+    margin-left: 9px;
+}
+
+#google-in-scroll-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .menu ul{            /* div apps (Js) */
     display: flex;
     padding-left: 0;

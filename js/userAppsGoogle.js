@@ -36,7 +36,7 @@ function userAppsGoogle_off(){
             Local Storage
 ==================================================================== */
 
-var formsGoogle = localStorage.getItem('formsGoogle')
+/* var formsGoogle = localStorage.getItem('formsGoogle')
 if (formsGoogle != null){
   var formsGoogle0 = JSON.parse(formsGoogle)
 } else {
@@ -45,10 +45,10 @@ if (formsGoogle != null){
 
 
 function appsGoogle_save(e){
-  e.preventDefault();
+  e.preventDefault(); */
 
   /* -------------------------- <Envia para o localStorage> -------------------------- */
-  var formsGoogle = localStorage.getItem('formsGoogle')
+/*   var formsGoogle = localStorage.getItem('formsGoogle')
   if (formsGoogle != null){
     var formsGoogle0 = JSON.parse(formsGoogle)
   } else {
@@ -63,12 +63,12 @@ function appsGoogle_save(e){
 
   console.log(formsGoogle0)
 
-  localStorage.setItem('formsGoogle', JSON.stringify(formsGoogle0))
+  localStorage.setItem('formsGoogle', JSON.stringify(formsGoogle0)) */
   
   /* -------------------------- </Envia para o localStorage> -------------------------- */
 
   /* ------------------------------- <imprime na tela> -------------------------------- */
-  
+/*   
   for (imprime in formsGoogle0) { 
     document.querySelector('#appGoogle-user-div').innerHTML +=
       `
@@ -103,13 +103,13 @@ function appsGoogle_save(e){
   </ul>
       `
   }
-}
+} */
 
 /* ============================================================================
           função para chamar no script.js (script.js não estava encontrando o  imprime. Aparentemente, a variável desenhaGoogle é quem está criando a essecomunicação)
 ============================================================================ */
 
-function desenha_google(){
+/* function desenha_google(){
   
   for (imprime in formsGoogle0) { 
     if (document.getElementById('appGoogle-user-div')){
@@ -150,6 +150,6 @@ function desenha_google(){
   }
 }
 
-var desenhaGoogle = desenha_google()
+var desenhaGoogle = desenha_google() */
 /* ========================================
 =========================================== */
