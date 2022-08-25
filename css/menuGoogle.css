@@ -1,0 +1,210 @@
+/* =====================
+       🟡 Menus
+===================== */
+
+.google-fundo{      /* botão apps */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+}
+
+.img-menu { 
+    width: 27px;
+}
+
+.google-fundo:hover{
+    background-color: grey;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.menu{            /* div apps (Js) */
+    width: 340px;
+    height: 411px;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0px;
+    box-shadow: 1px 1px 8px 0px #000000;
+    right: 20px;
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    z-index: 400;
+}
+
+#google-apps-scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 368px;
+    margin-top: 7px;
+    margin-right: 4px;
+}
+
+#google-in-scroll {        /*os apps estão numa div dentro do scroll */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 14px;
+    margin-left: 9px;
+}
+
+#google-in-scroll-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#addGoogle-button{
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    width: 178px;
+    height: 30px;
+    color: white;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color:#505050;;
+}
+
+#addGoogle-button:hover{
+   cursor: pointer;
+   background-color: rgb(80, 102, 102);
+}
+
+.menu form{            /* form ao qual se encontra o botão mais do google */
+    position: absolute;
+    margin-top: 368px;
+}
+
+.menu form button{            /* botão mais do google */
+    BORDER: none;
+    height: 44px;
+    width: 340px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    z-index: 1;
+}
+
+.menu form button:hover {
+    background-color: rgb(65, 83, 83);
+    cursor: pointer;
+}
+
+.icones{
+    width: 84px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: relative;
+    margin: 0;
+}
+
+.icones-view{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    width: 89px;
+}
+
+.icones-view img{
+    width: 50px;
+}
+
+.icones-fundo {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    background-color: rgb(18, 128, 128);
+    opacity: 0.5 ;
+    top: 0;
+    z-index: -1;
+}
+
+.icones-view:hover + .icones-fundo{
+    display: flex;
+    cursor: pointer;
+}
+
+.google-button {
+    margin-bottom: 20px;
+}
+
+/* ===================================================================== */
+                        /*  */
+/* ===================================================================== */
+
+
+#section-menuEdit-appGoogle{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    position: fixed;
+    width: 409px;
+    height: 310px;;
+    margin-top: 21px;
+}
+
+#menu-edit-appGoogle {
+    background-color: white;
+    border-radius: 9px;
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    position: fixed;
+    width: 409px;
+    height: 310px;
+    box-shadow: 1px 1px 8px 0px #000000;
+    margin-top: 160px;
+    
+}
+
+#menu-edit-appGoogle input{
+    width: 340px;
+    height: 26px;
+    margin-top: 17px;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding-left: 6px;
+}
+
+#appGoogle-saveButton{
+    background-color: #363636;
+    border: none;
+    height: 39px;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    margin-top: 274px;
+    position: absolute;
+    z-index: 4;
+}
+
+#appGoogle-saveButton:hover{
+  background-color: rgb(65, 83, 83);
+  cursor: pointer;
+}
+
