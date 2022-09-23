@@ -40,6 +40,7 @@
     border-radius: 50px;
     font-size: 20px;
     transition: 100ms;
+    font-weight: bold;
 }
 
 .homeApp-user-div p:hover{
@@ -54,6 +55,7 @@
     border-radius: 50px;
     font-size: 20px;
     transition: 100ms;
+    opacity: 0.8;
 }
 
 .nameApp{

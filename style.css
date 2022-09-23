@@ -183,6 +183,7 @@ div ::-webkit-scrollbar-thumb {
     background-color: white;
     padding-left: 13px;
     padding-right: 20px;
+    box-shadow: 1px 1px 7px 0px grey;
     
 }
 

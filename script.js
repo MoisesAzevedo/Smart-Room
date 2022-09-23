@@ -134,9 +134,7 @@ function principais_noticias(){
 }
 /* -----------------------Botão User--------------------- */
 function principais_noticias2(){
-    if (document.querySelector('#janela-noticia')) {
-        console.log('Opa Rapa')
-    } else {
+  
 
     if (document.querySelector('#janela-noticia') != null) {
         document.querySelector('#janela-noticia').remove();
@@ -148,12 +146,37 @@ function principais_noticias2(){
             <iframe src="https://www.suno.com.br/artigos/" class="iframe"></iframe>
             <div style="display: none;" class="principais2"></div> 
         </div> `
-    }
+    
+      
+    
 }
 
 //============= função do botão Encerrar Noticias =========== 
 function encerrarNews(){  
     document.querySelector('#janela-noticia').remove();
 }
+
+/* ================================================ */
+
+
+/* ======================================
+      Scroll suave
+====================================== */
+function ScrollOnClick(e){
+    e.preventDefault();
+
+    const elemento = document.querySelector(".news-icon a");
+    const id = elemento.getAttribute('href') ;
+    console.log(id)
+    const to = document.querySelector(id).offsetTop;
+
+   
+    window.scroll({
+        top: to,
+        behavior: "smooth",
+    })
+} 
+
+
 
 /* ================================================ */

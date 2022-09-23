@@ -25,6 +25,15 @@ function config(){
             </div>
         </div>`
     }
+
+    /* Remove o menuzinho do Google e da Micro */
+    if (document.querySelector('.menu') != null) {
+        document.querySelector('.menu').remove()
+    }
+   
+    if (document.querySelector('.menuMicro') != null) {
+        document.querySelector('.menuMicro').remove()
+    }
 }
 
 
