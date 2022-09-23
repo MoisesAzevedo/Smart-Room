@@ -120,11 +120,12 @@
     flex-direction: column;
     justify-content: center;
     z-index: 1;
-    width: 89px;
+    height: 90px;
+    width: 90px;
 }
 
 .icones-view img{
-    width: 50px;
+    width: 30px;
 }
 
 .icones-fundo {
@@ -143,6 +144,18 @@
 .icones-view:hover + .icones-fundo{
     display: flex;
     cursor: pointer;
+}
+
+.iconeFundo-branco{
+    background-color: white;
+    border-radius: 30px;
+    opacity: 0.9;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    
 }
 
 .google-button {

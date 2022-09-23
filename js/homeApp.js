@@ -17,6 +17,7 @@ function home_addLink() {
 /* =============================================================
                 Impressão altomática
 ============================================================== */
+/* IMPORTANTE: não está sendo utilizado mais o homeApp1[imprimt].icon, pois foi substituído por uma busca pelo fav icon */
 function desenhaTabela() {
     
     var homeApp = localStorage.getItem('homeApp')
@@ -33,14 +34,18 @@ function desenhaTabela() {
             }
         }
 
-        for (imprime in homeApp1) {                         //Cria tudo atualizado //a estrutura a seguir se repete 5 vezes nesse arquivo. Penso que seria melhor colocar a estrutura em uma variável
+        for (imprime in homeApp1) {                         //Cria tudo atualizado //a estrutura a seguir se repete 2 vezes nesse arquivo, uma no desenhatabela() e outra no editapp()
             document.querySelector('.homeApp-user-div').innerHTML += 
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">   
+                        <div class="iconeFundo-branco">
+                            <img src="https://s2.googleusercontent.com/s2/favicons?domain=${homeApp1[imprime].link}">   
+                        </div>
                     </div>
-                    <div class="icones-fundo">  </div>
+                    
+                    <div class="icones-fundo">
+                    </div>
                 </a> 
 
                 <form onsubmit="nameApp_edit(event, ${imprime})">
@@ -119,32 +124,7 @@ function homeAdd_save(c) {
         }
     }
 
-    //Cria tudo atualizado 
-    for (imprime in homeApp1) {   
-        // impede a inclusão de 18 objetos                      
-        if (imprime == 18) {
-            homeApp1 = homeApp1.splice(18)
-            localStorage.setItem('homeApp', JSON.stringify(homeApp1))
-            alert('Ops! Não sobrou espaço, mas em breve teremos mais.')
-            break
-        }
-
-         document.querySelector('.homeApp-user-div').innerHTML += 
-            `<div class="homeApp-user">
-                <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
-                    <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">   
-                    </div>
-                    <div class="icones-fundo">  </div>
-                </a> 
-
-                <form onsubmit="nameApp_edit(event, ${imprime})">
-                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
-                </form> 
-
-                <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
-            </div>`
-    }
+   desenhaTabela()
 
 }
 
@@ -183,7 +163,9 @@ function editApp(imp) {
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">   
+                        <div class="iconeFundo-branco">
+                            <img src="https://s2.googleusercontent.com/s2/favicons?domain=${homeApp1[imprime].link}">   
+                        </div>  
                     </div>
                     <div class="icones-fundo">  </div>
                 </a> 
@@ -201,7 +183,9 @@ function editApp(imp) {
             `<div class="homeApp-user">
                 <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
                     <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">   
+                        <div class="iconeFundo-branco">
+                            <img src="https://s2.googleusercontent.com/s2/favicons?domain=${homeApp1[imprime].link}">   
+                        </div>   
                     </div>
                     <div class="icones-fundo">  </div>
                 </a> 
@@ -240,21 +224,7 @@ function exclui_editApp(imp2) {
     
         //Cria tudo atualizado 
         for (imprime in homeApp1) {   
-            document.querySelector('.homeApp-user-div').innerHTML += 
-            `<div class="homeApp-user">
-                <a href="${homeApp1[imprime].link}" target="_blank" class="icones">  
-                    <div class="icones-view">
-                        <img src="${homeApp1[imprime].icone}">   
-                    </div>
-                    <div class="icones-fundo">  </div>
-                </a>
-
-                <form onsubmit="nameApp_edit(event, ${imprime})">
-                    <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
-                </form> 
-
-                <p class='edit-app' onclick='editApp(${imprime})'>⁝</p>
-            </div>`
+           desenhaTabela()
         }   
     } else {
         alert(homeApp1[imp2].nome + ' intácto. (hehe)')
