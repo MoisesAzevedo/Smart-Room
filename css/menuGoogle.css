@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 
@@ -125,7 +126,7 @@
 }
 
 .icones-view img{
-    width: 30px;
+    width: 45px;
 }
 
 .icones-fundo {

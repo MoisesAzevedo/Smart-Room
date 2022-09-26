@@ -74,7 +74,7 @@ function desenhaGoogle(){
         <div id="google-in-scroll-div">
             <a href="${formsGoogle0[googleImprime].link}" target="_blank" class="icones">  
                 <div class="icones-view" >
-                <img id="img-micro" src="https://s2.googleusercontent.com/s2/favicons?domain=${formsGoogle0[googleImprime].link}" style="margin: 0;">
+                <img id="img-micro" src="${formsGoogle0[googleImprime].icone}" style="margin: 0;">
                 
                 </div>
                 <div class="icones-fundo">  </div>

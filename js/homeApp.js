@@ -48,7 +48,7 @@ function desenhaTabela() {
                     </div>
                 </a> 
 
-                <form onsubmit="nameApp_edit(event, ${imprime})">
+                <form onsubmit="nameApp_edit(event, ${imprime})" class="nameApp-form">
                     <input value="${homeApp1[imprime].nome}" class="nameApp" name="nameApp" id="nameApp" type="text" ></input> 
                 </form>
 

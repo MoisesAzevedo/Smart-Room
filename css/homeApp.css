@@ -73,8 +73,11 @@
 .nameApp:hover{
     width: 190px;
     transition: 100ms;
-    z-index: 2;
     background-color: var(--buttonCor);
+}
+
+.nameApp-form:hover{
+    z-index: 4;
 }
 
 .edit-app{                     /*  botãozinho de editar os apps */
@@ -110,19 +113,23 @@
     cursor: pointer;
 }
 
+.iconeFundo-branco img{
+    width: 30px;
+}
 
 #home-addLink{
-    width: 25px;
+    position: relative;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 5px;
-    bottom: 5px;
     position: absolute;
+    width: 400px;
+    border-radius: 32px;
 }
 
 #home-addLinkButton {
+    position: absolute;
     width: 20px;
     transition: 0.1s;
 }
@@ -132,7 +139,17 @@
     opacity: 0.8;
     width: 25px;
     transition: 0.1s;
+    z-index: 1;
 } 
+
+#home-addLink-fundo{
+    background: grey;
+    width: 400px;
+    height: 25px;
+    border-radius: 32px;
+    opacity: 0.6;
+    z-index: 0;
+}
 
 /* =============================================================
      🟡   Menu

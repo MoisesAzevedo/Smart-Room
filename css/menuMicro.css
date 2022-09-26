@@ -55,12 +55,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .nameAppMicro{
     color: black;
     margin: 0;
-    margin-top: 6px;
+    margin-top: 0;
     width: 69px;
     text-align: center;
     border: none;
