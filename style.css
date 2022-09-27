@@ -2,7 +2,7 @@
       🟡  Variáveis de cor 
 ============================= */
 :root {
-    --textoCor: #161616; 
+    --textoCor: white; 
     --textoCor_hover: rgb(195, 255, 255);
     --textoCor_hover2: rgb(123, 168, 168);
     --buttonCor: #363636;
@@ -223,7 +223,25 @@ div ::-webkit-scrollbar-thumb {
     width: 14px;
 }
 
+/* ========================================================= */
+                    /* Relógio */
+/* ========================================================= */
 
+#rel {
+    background: none;
+    border: none;
+    color: var(--textoCor);
+    text-align: center;
+    margin-top: 20px;
+    height: 65px;
+    width: 351px;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+
+
+/* ========================================================= */
 
 
 

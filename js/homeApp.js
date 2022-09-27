@@ -97,34 +97,38 @@ function homeAdd_save(c) {
         var homeApp1 = []
     }
 
-   /* inutil */ console.log(c)
-    /* inutil */ console.log(homeApp1)
+    /* Não cria se tiver 18 */
+    
+    if (homeApp1.length == 18) {
+        alert('Sem espaço aqui')
+        return false
+    } else {
+        //Valor do icone
+        var homeApp_icon = c.target.elements['icone'].value
+        if (homeApp_icon == ''){
+            var homeApp_icon = `./img/house.png`
+        }   
 
-    //Valor do icone
-    var homeApp_icon = c.target.elements['icone'].value
-    if (homeApp_icon == ''){
-        var homeApp_icon = `./img/house.png`
-    }   
+        homeApp1.push({
+            nome: c.target.elements['frase-input2'].value,
+            link: c.target.elements['frase-input'].value,
+            icone: homeApp_icon,
+        }) 
 
-    homeApp1.push({
-        nome: c.target.elements['frase-input2'].value,
-        link: c.target.elements['frase-input'].value,
-        icone: homeApp_icon,
-    }) 
+        localStorage.setItem('homeApp', JSON.stringify(homeApp1))
 
-    localStorage.setItem('homeApp', JSON.stringify(homeApp1))
-
-    if (document.querySelector('.links p')) {               //Remove a frase (Não há links)
-        document.querySelector('.links p').remove()
-    }
-
-    for (remove in homeApp) {                           // Remove tudo
-        if (document.querySelector('.homeApp-user')){
-            document.querySelector('.homeApp-user').remove()            
+        if (document.querySelector('.links p')) {               //Remove a frase (Não há links)
+            document.querySelector('.links p').remove()
         }
-    }
 
-   desenhaTabela()
+        for (remove in homeApp) {                           // Remove tudo
+            if (document.querySelector('.homeApp-user')){
+                document.querySelector('.homeApp-user').remove()            
+            }
+        }
+
+        desenhaTabela()
+    }
 
 }
 

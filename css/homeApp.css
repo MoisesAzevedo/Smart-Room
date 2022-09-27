@@ -141,11 +141,11 @@
 } 
 
 #home-addLink-fundo{
-    background: grey;
+    background: var(--buttonCor);
     width: 400px;
     height: 25px;
     border-radius: 32px;
-    opacity: 0.6;
+    opacity: 0.3;
     z-index: 0;
 }
 
